@@ -28,7 +28,7 @@
     <link href="{{ asset('css/style.css') }}" rel="stylesheet" />
 
     <!-- Modernizr JS -->
-    <script src="js/modernizr-3.6.0.min.js"></script>
+    <script src="{{ asset('js/modernizr-3.6.0.min.js') }}"></script>
     <title>Document</title>
 </head>
 
@@ -59,7 +59,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-12">
-                            <a href="#hero" class="nav-logo"><img src="images/logo.png" alt="Neela" /></a>
+                            <a href="#hero" class="nav-logo"><img src="{{ asset('images/logo.png') }}" alt="Neela" /></a>
 
                             <!-- BEGIN MAIN MENU -->
                             <nav class="navbar">
@@ -152,7 +152,7 @@
                     <div class="element col-md-6 col-xl-4 offset-xl-2" data-animation-direction="from-left"
                         data-animation-delay="300">
                         <div class="image">
-                            <img src="images/groom.jpg" alt="" width="600" height="714" />
+                            <img src="{{ asset('images/groom.jpg') }}" alt="" width="600" height="714" />
                             <div class="hover-info neela-style">
                                 <div class="content">
                                     <h3>Andrew Miller<small>The Groom</small></h3>
@@ -175,7 +175,7 @@
                     <div class="element col-md-6 col-xl-4" data-animation-direction="from-right"
                         data-animation-delay="400">
                         <div class="image">
-                            <img src="images/bride.jpg" alt="" width="600" height="714" />
+                            <img src="{{ asset('images/bride.jpg') }}" alt="" width="600" height="714" />
                             <div class="hover-info neela-style">
                                 <div class="content">
                                     <h3>Isabella Walker<small>The Bride</small></h3>
@@ -1264,32 +1264,32 @@
     <script src="js/richmarker.js"></script>
 
     <!-- Libs -->
-    <script src="js/jquery-3.6.0.min.js"></script>
-    <script src="js/jquery-ui.min.js"></script>
-    <script src="js/jquery-migrate-3.3.2.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/jquery.placeholder.min.js"></script>
-    <script src="js/ismobile.js"></script>
-    <script src="js/retina.min.js"></script>
-    <script src="js/waypoints.min.js"></script>
-    <script src="js/waypoints-sticky.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/lightbox.min.js"></script>
+    <script src="{{ asset('js/jquery-3.6.0.min.js') }} "></script>
+    <script src="{{ asset('js/jquery-ui.min.js') }} "></script>
+    <script src="{{ asset('js/jquery-migrate-3.3.2.min.js') }} "></script>
+    <script src="{{ asset('js/bootstrap.bundle.min.js') }} "></script>
+    <script src="{{ asset('js/jquery.placeholder.min.js') }} "></script>
+    <script src="{{ asset('js/ismobile.js') }} "></script>
+    <script src="{{ asset('js/retina.min.js') }} "></script>
+    <script src="{{ asset('js/waypoints.min.js') }} "></script>
+    <script src="{{ asset('js/waypoints-sticky.min.js') }} "></script>
+    <script src="{{ asset('js/owl.carousel.min.js') }} "></script>
+    <script src="{{ asset('js/lightbox.min.js') }} "></script>
 
     <!-- Nicescroll script to handle gallery section touch swipe -->
-    <script src="js/jquery.nicescroll.js"></script>
+    <script src="{{ asset('js/jquery.nicescroll.js') }}"></script>
 
     <!-- Hero Background Slideshow Script -->
-    <script src="js/jquery.zoomslider.js"></script>
+    <script src="{{ asset('js/jquery.zoomslider.js') }}"></script>
 
     <!-- Template Scripts -->
-    <script src="js/variables.js"></script>
-    <script src="js/scripts.js"></script>
+    <script src="{{ asset('js/variables.js') }}"></script>
+    <script src="{{ asset('js/scripts.js') }}"></script>
+    <script src="{{ asset('js/template.settings.js') }}"></script>
 
     <!-- Google reCaptcha API -->
-    <script src="../../../www.google.com/recaptcha/api.js" async defer></script>
+    {{-- <script src="../../../www.google.com/recaptcha/api.js" async defer></script> --}}
 
-    <script src="js/template.settings.js"></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-7JZLG63NQZ"></script>
