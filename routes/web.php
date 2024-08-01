@@ -1,7 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\WeddingController;
 
-Route::get('/', function () {
-    return view('index');
-});
+
+
+Route::redirect('/', '/index');
+
+Route::get('/index', [WeddingController::class, 'index']);
+Route::get('/index-multipage', [WeddingController::class, 'multipage']);

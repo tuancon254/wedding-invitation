@@ -11,13 +11,16 @@
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&amp;display=swap" rel="stylesheet"
             type="text/css" />
     </noscript>
-
+    <link rel="icon" href="{{ asset('images/heart-32.png')}}" type="image/x-icon">
+    {{-- <link rel="icon" href="images/fav_touch_icons/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="images/fav_touch_icons/apple-touch-icon-180x180.png">
+    <link rel="manifest" href="images/fav_touch_icons/manifest.json"> --}}
     <!-- Bootstrap CSS -->
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet" />
 
     <!-- FontAwesome CSS -->
     <link href="{{ asset('css/fontawesome-all.min.css') }}" rel="stylesheet" />
-
+    {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" /> --}}
     <!-- Neela Icon Set CSS -->
     <link href="{{ asset('css/neela-icon-set.css') }}" rel="stylesheet" />
 
@@ -29,21 +32,21 @@
 
     <!-- Modernizr JS -->
     <script src="{{ asset('js/modernizr-3.6.0.min.js') }}"></script>
-    <title>Document</title>
+    <title>Tuan & Lan - Wedding Invitation</title>
 </head>
 
 <body>
     <!-- BEGIN PRELOADER -->
     <div id="preloader">
         <div class="loading-heart">
-            <svg viewBox="0 0 512 512" width="100">
+            <svg viewBox="0 0 512 512" width="300">
                 <path
                     d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z" />
             </svg>
             <div class="preloader-title">
-                Isabella<br>
+                Tuan<br>
                 <small>&</small><br>
-                Andrew
+                Lan
             </div>
         </div>
     </div>
@@ -59,7 +62,8 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-12">
-                            <a href="#hero" class="nav-logo"><img src="{{ asset('images/logo.png') }}" alt="Neela" /></a>
+                            <a href="#hero" class="nav-logo"><img src="{{ asset('images/logo.png') }}"
+                                    alt="Neela" /></a>
 
                             <!-- BEGIN MAIN MENU -->
                             <nav class="navbar">
@@ -125,13 +129,13 @@
                             <h2 data-animation-direction="fade" data-animation-delay="600">Save the Date</h2>
 
                             <h1 class="hero-title light ">
-                                <span data-animation-direction="from-right" data-animation-delay="300">Isabella</span>
+                                <span data-animation-direction="from-right" data-animation-delay="300">Minh Tuan</span>
                                 <small data-animation-direction="from-top" data-animation-delay="300">&</small>
-                                <span data-animation-direction="from-left" data-animation-delay="300">Andrew</span>
+                                <span data-animation-direction="from-left" data-animation-delay="300">Minh Lan</span>
                             </h1>
 
                             <div class="hero-subtitle light" data-animation-direction="fade"
-                                data-animation-delay="1000">SEPT <span>24</span> 2025</div>
+                                data-animation-delay="1000">SEPT <span>08</span> 2024</div>
 
                             <div data-animation-direction="fade" data-animation-delay="1000">
                                 <a href="#rsvp" class="btn btn-light scrollto">RSVP</a>
@@ -152,7 +156,8 @@
                     <div class="element col-md-6 col-xl-4 offset-xl-2" data-animation-direction="from-left"
                         data-animation-delay="300">
                         <div class="image">
-                            <img src="{{ asset('images/groom.jpg') }}" alt="" width="600" height="714" />
+                            <img src="{{ asset('images/groom.jpg') }}" alt="" width="600"
+                                height="714" />
                             <div class="hover-info neela-style">
                                 <div class="content">
                                     <h3>Andrew Miller<small>The Groom</small></h3>
@@ -175,7 +180,8 @@
                     <div class="element col-md-6 col-xl-4" data-animation-direction="from-right"
                         data-animation-delay="400">
                         <div class="image">
-                            <img src="{{ asset('images/bride.jpg') }}" alt="" width="600" height="714" />
+                            <img src="{{ asset('images/bride.jpg') }}" alt="" width="600"
+                                height="714" />
                             <div class="hover-info neela-style">
                                 <div class="content">
                                     <h3>Isabella Walker<small>The Bride</small></h3>
@@ -203,7 +209,7 @@
                             Aenean quis nisl at est consequat elementum sed vel turpis. Phasellus dignissim sit amet
                             orci vitae mattis. Phasellus a imperdiet ligula, efficitur dignissim ex. Mauris placerat
                             aliquet sem commodo molestie.</p>
-                        <img src="images/signature-2.png" alt="Andrew and Isabella">
+                        <img src="{{ asset('images/signature-2.png') }}" alt="Andrew and Isabella">
                     </div>
                 </div>
             </div>
@@ -243,14 +249,14 @@
 
                                 <div class="image-1" data-parallax="-4" data-animation-direction="from-left"
                                     data-animation-delay="250">
-                                    <img src="images/timeline-first-date.jpg" alt="" width="600"
-                                        height="600">
+                                    <img src="{{ asset('images/timeline-first-date.jpg') }}" alt=""
+                                        width="600" height="600">
                                 </div>
 
                                 <div class="image-2" data-parallax="6" data-animation-direction="from-right"
                                     data-animation-delay="250">
-                                    <img src="images/timeline-first-kiss.jpg" alt="" width="600"
-                                        height="818">
+                                    <img src="{{ asset('images/timeline-first-kiss.jpg') }}" alt=""
+                                        width="600" height="818">
                                 </div>
 
                                 <div class="description-wrapper" data-parallax="-6"
@@ -280,59 +286,66 @@
                                             <a class="hover-img" href="images/timeline-slider-img1.jpg"
                                                 data-lightbox="gallery-timeline" title="Our Vacations"><span
                                                     class="btn btn-light btn-sm">+</span></a>
-                                            <img src="images/timeline-slider-img1.jpg" alt="" width="620"
-                                                height="431" />
+                                            <img src="{{ asset('images/timeline-slider-img1.jpg') }}" alt=""
+                                                width="620" height="431" />
                                         </div>
 
                                         <div class="item">
-                                            <a class="hover-img" href="images/timeline-slider-img2.jpg"
+                                            <a class="hover-img"
+                                                href="{{ asset('images/timeline-slider-img2.jpg') }}"
                                                 data-lightbox="gallery-timeline" title="Our Vacations"><span
                                                     class="btn btn-light btn-sm">+</span></a>
-                                            <img src="images/timeline-slider-img2.jpg" alt="" width="620"
-                                                height="431" />
+                                            <img src="{{ asset('images/timeline-slider-img2.jpg') }}" alt=""
+                                                width="620" height="431" />
                                         </div>
 
                                         <div class="item">
-                                            <a class="hover-img" href="images/timeline-slider-img3.jpg"
+                                            <a class="hover-img"
+                                                href="{{ asset('images/timeline-slider-img3.jpg') }}"
                                                 data-lightbox="gallery-timeline" title="Our Vacations"><span
                                                     class="btn btn-light btn-sm">+</span></a>
-                                            <img src="images/timeline-slider-img3.jpg" alt="" width="620"
-                                                height="431" />
+                                            <img src="{{ asset('images/timeline-slider-img3.jpg') }}" alt=""
+                                                width="620" height="431" />
                                         </div>
                                         <div class="item">
-                                            <a class="hover-img" href="images/timeline-slider-img4.jpg"
+                                            <a class="hover-img"
+                                                href="{{ asset('images/timeline-slider-img4.jpg') }}"
                                                 data-lightbox="gallery-timeline" title="Our Vacations"><span
                                                     class="btn btn-light btn-sm">+</span></a>
-                                            <img src="images/timeline-slider-img4.jpg" alt="" width="620"
-                                                height="431" />
+                                            <img src="{{ asset('images/timeline-slider-img4.jpg') }}" alt=""
+                                                width="620" height="431" />
                                         </div>
                                         <div class="item">
-                                            <a class="hover-img" href="images/timeline-slider-img5.jpg"
+                                            <a class="hover-img"
+                                                href="{{ asset('images/timeline-slider-img5.jpg') }}"
                                                 data-lightbox="gallery-timeline" title="Our Vacations"><span
                                                     class="btn btn-light btn-sm">+</span></a>
-                                            <img src="images/timeline-slider-img5.jpg" alt="" width="620"
-                                                height="431" />
+                                            <img src="{{ asset('images/timeline-slider-img5.jpg') }}" alt=""
+                                                width="620" height="431" />
                                         </div>
                                         <div class="item">
-                                            <a class="hover-img" href="images/timeline-slider-img6.jpg"
+                                            <a class="hover-img"
+                                                href="{{ asset('images/timeline-slider-img6.jpg') }}"
                                                 data-lightbox="gallery-timeline" title="Our Vacations"><span
                                                     class="btn btn-light btn-sm">+</span></a>
-                                            <img src="images/timeline-slider-img6.jpg" alt="" width="620"
-                                                height="431" />
+                                            <img src="{{ asset('images/timeline-slider-img6.jpg') }}" alt=""
+                                                width="620" height="431" />
                                         </div>
                                         <div class="item">
-                                            <a class="hover-img" href="images/timeline-slider-img7.jpg"
+                                            <a class="hover-img"
+                                                href="{{ asset('images/timeline-slider-img7.jpg') }}"
                                                 data-lightbox="gallery-timeline" title="Our Vacations"><span
                                                     class="btn btn-light btn-sm">+</span></a>
-                                            <img src="images/timeline-slider-img7.jpg" alt="" width="620"
-                                                height="431" />
+                                            <img src="{{ asset('images/timeline-slider-img7.jpg') }}" alt=""
+                                                width="620" height="431" />
                                         </div>
                                         <div class="item">
-                                            <a class="hover-img" href="images/timeline-slider-img8.jpg"
+                                            <a class="hover-img"
+                                                href="{{ asset('images/timeline-slider-img8.jpg') }}"
                                                 data-lightbox="gallery-timeline" title="Our Vacations"><span
                                                     class="btn btn-light btn-sm">+</span></a>
-                                            <img src="images/timeline-slider-img8.jpg" alt="" width="620"
-                                                height="431" />
+                                            <img src="{{ asset('images/timeline-slider-img8.jpg') }}" alt=""
+                                                width="620" height="431" />
                                         </div>
                                     </div>
                                 </div>
@@ -370,14 +383,14 @@
 
                                 <div class="image-1" data-parallax="-2" data-animation-direction="from-left"
                                     data-animation-delay="250">
-                                    <img src="images/timeline-proposal-img1.jpg" alt="" width="600"
-                                        height="818">
+                                    <img src="{{ asset('images/timeline-proposal-img1.jpg') }}" alt=""
+                                        width="600" height="818">
                                 </div>
 
                                 <div class="image-2" data-parallax="4" data-animation-direction="from-right"
                                     data-animation-delay="250">
-                                    <img src="images/timeline-proposal-img2.jpg" alt="" width="600"
-                                        height="800">
+                                    <img src="{{ asset('images/timeline-proposal-img2.jpg') }}" alt=""
+                                        width="600" height="800">
                                 </div>
 
                                 <div class="description-wrapper" data-parallax="-5"
@@ -401,7 +414,8 @@
                             <div data-animation-direction="from-top" data-animation-delay="250"><i
                                     class="icon-diamond-ring"></i></div>
                             <div class="punchline" data-animation-direction="from-bottom" data-animation-delay="250">
-                                <small>This is where our</small>forever<br>begins!</div>
+                                <small>This is where our</small>forever<br>begins!
+                            </div>
                         </div>
 
                     </div>
@@ -522,7 +536,8 @@
                     <div class="element bmaid-gmen col-sm-6 col-lg-4" data-animation-direction="from-top"
                         data-animation-delay="300">
                         <div class="image">
-                            <img src="images/bridesmaids-img1.jpg" alt="" width="434" height="434" />
+                            <img src="{{ asset('images/bridesmaids-img1.jpg') }}" alt="" width="434"
+                                height="434" />
                             <div class="hover-info neela-style">
                                 <div class="content center">
                                     <h3>Emily Garcia<small>Maid of honour</small></h3>
@@ -539,7 +554,8 @@
                     <div class="element bmaid-gmen col-sm-6 col-lg-4" data-animation-direction="from-top"
                         data-animation-delay="400">
                         <div class="image">
-                            <img src="images/bridesmaids-img2.jpg" alt="" width="434" height="434" />
+                            <img src="{{ asset('images/bridesmaids-img2.jpg') }}" alt="" width="434"
+                                height="434" />
                             <div class="hover-info neela-style">
                                 <div class="content center">
                                     <h3>Rachel Harris<small>Bridesmaid</small></h3>
@@ -556,7 +572,8 @@
                     <div class="element bmaid-gmen col-sm-6 col-lg-4" data-animation-direction="from-top"
                         data-animation-delay="500">
                         <div class="image">
-                            <img src="images/bridesmaids-img3.jpg" alt="" width="434" height="434" />
+                            <img src="{{ asset('images/bridesmaids-img3.jpg') }}" alt="" width="434"
+                                height="434" />
                             <div class="hover-info neela-style">
                                 <div class="content center">
                                     <h3>Sarah Williams<small>Bridesmaid</small></h3>
@@ -637,7 +654,8 @@
                     <div class="element bmaid-gmen col-sm-6 col-lg-4" data-animation-direction="from-top"
                         data-animation-delay="300">
                         <div class="image">
-                            <img src="images/groomsmen-img1.jpg" alt="" width="434" height="434" />
+                            <img src="{{ asset('images/groomsmen-img1.jpg') }}" alt="" width="434"
+                                height="434" />
                             <div class="hover-info neela-style">
                                 <div class="content center">
                                     <h3>Michael Scott<small>Best Man</small></h3>
@@ -654,7 +672,8 @@
                     <div class="element bmaid-gmen col-sm-6 col-lg-4" data-animation-direction="from-top"
                         data-animation-delay="400">
                         <div class="image">
-                            <img src="images/groomsmen-img2.jpg" alt="" width="434" height="434" />
+                            <img src="{{ asset('images/groomsmen-img2.jpg') }}" alt="" width="434"
+                                height="434" />
                             <div class="hover-info neela-style">
                                 <div class="content center">
                                     <h3>Daniel Wright<small>Groomsman</small></h3>
@@ -671,7 +690,8 @@
                     <div class="element bmaid-gmen col-sm-6 col-lg-4" data-animation-direction="from-top"
                         data-animation-delay="500">
                         <div class="image">
-                            <img src="images/groomsmen-img3.jpg" alt="" width="434" height="434" />
+                            <img src="{{ asset('images/groomsmen-img3.jpg') }}" alt="" width="434"
+                                height="434" />
                             <div class="hover-info neela-style">
                                 <div class="content center">
                                     <h3>Ryan Anderson<small>Groomsman</small></h3>
@@ -714,9 +734,10 @@
                                     <h3>Check our<br>wedding gift list</h3>
 
                                     <div class="info">
-                                        <a href="#" class="img"><img src="images/macys-logo.png"
-                                                alt="Macy's" /></a>
-                                        <a href="#" class="img"><img src="images/bed-bath-beyond-logo.png"
+                                        <a href="#" class="img"><img
+                                                src="{{ asset('images/macys-logo.png') }}" alt="Macy's" /></a>
+                                        <a href="#" class="img"><img
+                                                src="{{ asset('images/bed-bath-beyond-logo.png') }}"
                                                 alt="Target" /></a>
                                     </div>
                                 </div>
@@ -778,203 +799,243 @@
                     <ul>
                         <li>
                             <div class="hover-info">
-                                <a class="btn btn-light btn-sm only-icon" href="images/gallery-img1.jpg"
-                                    data-lightbox="WeddingPhotos" title="Wedding Photos">
+                                <a class="btn btn-light btn-sm only-icon"
+                                    href="{{ asset('images/gallery-img1.jpg') }}" data-lightbox="WeddingPhotos"
+                                    title="Wedding Photos">
                                     <i class="fa fa-link"></i>
                                 </a>
                             </div>
-                            <img src="images/gallery-thumb1.jpg" alt="" width="380" height="380" />
+                            <img src="{{ asset('images/gallery-thumb1.jpg') }}" alt="" width="380"
+                                height="380" />
                         </li>
 
                         <li>
                             <div class="hover-info">
-                                <a class="btn btn-light btn-sm only-icon" href="images/gallery-img2.jpg"
-                                    data-lightbox="WeddingPhotos" title="Wedding Photos">
+                                <a class="btn btn-light btn-sm only-icon"
+                                    href="{{ asset('images/gallery-img2.jpg') }}" data-lightbox="WeddingPhotos"
+                                    title="Wedding Photos">
                                     <i class="fa fa-link"></i>
                                 </a>
                             </div>
-                            <img src="images/gallery-thumb2.jpg" alt="" width="380" height="380" />
+                            <img src="{{ asset('images/gallery-thumb2.jpg') }}" alt="" width="380"
+                                height="380" />
                         </li>
 
                         <li>
                             <div class="hover-info">
-                                <a class="btn btn-light btn-sm only-icon" href="images/gallery-img3.jpg"
-                                    data-lightbox="WeddingPhotos" title="Wedding Photos">
+                                <a class="btn btn-light btn-sm only-icon"
+                                    href="{{ asset('images/gallery-img3.jpg') }}" data-lightbox="WeddingPhotos"
+                                    title="Wedding Photos">
                                     <i class="fa fa-link"></i>
                                 </a>
                             </div>
-                            <img src="images/gallery-thumb3.jpg" alt="" width="380" height="380" />
+                            <img src="{{ asset('images/gallery-thumb3.jpg') }}" alt="" width="380"
+                                height="380" />
                         </li>
 
                         <li>
                             <div class="hover-info">
-                                <a class="btn btn-light btn-sm only-icon" href="images/gallery-img4.jpg"
-                                    data-lightbox="WeddingPhotos" title="Wedding Photos">
+                                <a class="btn btn-light btn-sm only-icon"
+                                    href="{{ asset('images/gallery-img4.jpg') }}" data-lightbox="WeddingPhotos"
+                                    title="Wedding Photos">
                                     <i class="fa fa-link"></i>
                                 </a>
                             </div>
-                            <img src="images/gallery-thumb4.jpg" alt="" width="380" height="380" />
+                            <img src="{{ asset('images/gallery-thumb4.jpg') }}" alt="" width="380"
+                                height="380" />
                         </li>
 
                         <li>
                             <div class="hover-info">
-                                <a class="btn btn-light btn-sm only-icon" href="images/gallery-img5.jpg"
-                                    data-lightbox="WeddingPhotos" title="Wedding Photos">
+                                <a class="btn btn-light btn-sm only-icon"
+                                    href="{{ asset('images/gallery-img5.jpg') }}" data-lightbox="WeddingPhotos"
+                                    title="Wedding Photos">
                                     <i class="fa fa-link"></i>
                                 </a>
                             </div>
-                            <img src="images/gallery-thumb5.jpg" alt="" width="380" height="380" />
+                            <img src="{{ asset('images/gallery-thumb5.jpg') }}" alt="" width="380"
+                                height="380" />
                         </li>
 
                         <li>
                             <div class="hover-info">
-                                <a class="btn btn-light btn-sm only-icon" href="images/gallery-img6.jpg"
-                                    data-lightbox="WeddingPhotos" title="Wedding Photos">
+                                <a class="btn btn-light btn-sm only-icon"
+                                    href="{{ asset('images/gallery-img6.jpg') }}" data-lightbox="WeddingPhotos"
+                                    title="Wedding Photos">
                                     <i class="fa fa-link"></i>
                                 </a>
                             </div>
-                            <img src="images/gallery-thumb6.jpg" alt="" width="380" height="380" />
+                            <img src="{{ asset('images/gallery-thumb6.jpg') }}" alt="" width="380"
+                                height="380" />
                         </li>
 
                         <li>
                             <div class="hover-info">
-                                <a class="btn btn-light btn-sm only-icon" href="images/gallery-img7.jpg"
-                                    data-lightbox="WeddingPhotos" title="Wedding Photos">
+                                <a class="btn btn-light btn-sm only-icon"
+                                    href="{{ asset('images/gallery-img7.jpg') }}" data-lightbox="WeddingPhotos"
+                                    title="Wedding Photos">
                                     <i class="fa fa-link"></i>
                                 </a>
                             </div>
-                            <img src="images/gallery-thumb7.jpg" alt="" width="380" height="380" />
+                            <img src="{{ asset('images/gallery-thumb7.jpg') }}" alt="" width="380"
+                                height="380" />
                         </li>
 
                         <li>
                             <div class="hover-info">
-                                <a class="btn btn-light btn-sm only-icon" href="images/gallery-img8.jpg"
-                                    data-lightbox="WeddingPhotos" title="Wedding Photos">
+                                <a class="btn btn-light btn-sm only-icon"
+                                    href="{{ asset('images/gallery-img8.jpg') }}" data-lightbox="WeddingPhotos"
+                                    title="Wedding Photos">
                                     <i class="fa fa-link"></i>
                                 </a>
                             </div>
-                            <img src="images/gallery-thumb8.jpg" alt="" width="380" height="380" />
+                            <img src="{{ asset('images/gallery-thumb8.jpg') }}" alt="" width="380"
+                                height="380" />
                         </li>
 
                         <li>
                             <div class="hover-info">
-                                <a class="btn btn-light btn-sm only-icon" href="images/gallery-img9.jpg"
-                                    data-lightbox="WeddingPhotos" title="Wedding Photos">
+                                <a class="btn btn-light btn-sm only-icon"
+                                    href="{{ asset('images/gallery-img9.jpg') }}" data-lightbox="WeddingPhotos"
+                                    title="Wedding Photos">
                                     <i class="fa fa-link"></i>
                                 </a>
                             </div>
-                            <img src="images/gallery-thumb9.jpg" alt="" width="380" height="380" />
+                            <img src="{{ asset('images/gallery-thumb9.jpg') }}" alt="" width="380"
+                                height="380" />
                         </li>
 
                         <li>
                             <div class="hover-info">
-                                <a class="btn btn-light btn-sm only-icon" href="images/gallery-img10.jpg"
-                                    data-lightbox="WeddingPhotos" title="Wedding Photos">
+                                <a class="btn btn-light btn-sm only-icon"
+                                    href="{{ asset('images/gallery-img10.jpg') }}" data-lightbox="WeddingPhotos"
+                                    title="Wedding Photos">
                                     <i class="fa fa-link"></i>
                                 </a>
                             </div>
-                            <img src="images/gallery-thumb10.jpg" alt="" width="380" height="380" />
+                            <img src="{{ asset('images/gallery-thumb10.jpg') }}" alt="" width="380"
+                                height="380" />
                         </li>
                     </ul>
                     <ul>
                         <li>
                             <div class="hover-info">
-                                <a class="btn btn-light btn-sm only-icon" href="images/gallery-img11.jpg"
-                                    data-lightbox="WeddingPhotos" title="Wedding Photos">
+                                <a class="btn btn-light btn-sm only-icon"
+                                    href="{{ asset('images/gallery-img11.jpg') }}" data-lightbox="WeddingPhotos"
+                                    title="Wedding Photos">
                                     <i class="fa fa-link"></i>
                                 </a>
                             </div>
-                            <img src="images/gallery-thumb11.jpg" alt="" width="380" height="380" />
+                            <img src="{{ asset('images/gallery-thumb11.jpg') }}" alt="" width="380"
+                                height="380" />
                         </li>
 
                         <li>
                             <div class="hover-info">
-                                <a class="btn btn-light btn-sm only-icon" href="images/gallery-img12.jpg"
-                                    data-lightbox="WeddingPhotos" title="Wedding Photos">
+                                <a class="btn btn-light btn-sm only-icon"
+                                    href="{{ asset('images/gallery-img12.jpg') }}" data-lightbox="WeddingPhotos"
+                                    title="Wedding Photos">
                                     <i class="fa fa-link"></i>
                                 </a>
                             </div>
-                            <img src="images/gallery-thumb12.jpg" alt="" width="380" height="380" />
+                            <img src="{{ asset('images/gallery-thumb12.jpg') }}" alt="" width="380"
+                                height="380" />
                         </li>
 
                         <li>
                             <div class="hover-info">
-                                <a class="btn btn-light btn-sm only-icon" href="images/gallery-img13.jpg"
-                                    data-lightbox="WeddingPhotos" title="Wedding Photos">
+                                <a class="btn btn-light btn-sm only-icon"
+                                    href="{{ asset('images/gallery-img13.jpg') }}" data-lightbox="WeddingPhotos"
+                                    title="Wedding Photos">
                                     <i class="fa fa-link"></i>
                                 </a>
                             </div>
-                            <img src="images/gallery-thumb13.jpg" alt="" width="380" height="380" />
+                            <img src="{{ asset('images/gallery-thumb13.jpg') }}" alt="" width="380"
+                                height="380" />
                         </li>
 
                         <li>
                             <div class="hover-info">
-                                <a class="btn btn-light btn-sm only-icon" href="images/gallery-img14.jpg"
-                                    data-lightbox="WeddingPhotos" title="Wedding Photos">
+                                <a class="btn btn-light btn-sm only-icon"
+                                    href="{{ asset('images/gallery-img14.jpg') }}" data-lightbox="WeddingPhotos"
+                                    title="Wedding Photos">
                                     <i class="fa fa-link"></i>
                                 </a>
                             </div>
-                            <img src="images/gallery-thumb14.jpg" alt="" width="380" height="380" />
+                            <img src="{{ asset('images/gallery-thumb14.jpg') }}" alt="" width="380"
+                                height="380" />
                         </li>
 
                         <li>
                             <div class="hover-info">
-                                <a class="btn btn-light btn-sm only-icon" href="images/gallery-img15.jpg"
-                                    data-lightbox="WeddingPhotos" title="Wedding Photos">
+                                <a class="btn btn-light btn-sm only-icon"
+                                    href="{{ asset('images/gallery-img15.jpg') }}" data-lightbox="WeddingPhotos"
+                                    title="Wedding Photos">
                                     <i class="fa fa-link"></i>
                                 </a>
                             </div>
-                            <img src="images/gallery-thumb15.jpg" alt="" width="380" height="380" />
+                            <img src="{{ asset('images/gallery-thumb15.jpg') }}" alt="" width="380"
+                                height="380" />
                         </li>
 
                         <li>
                             <div class="hover-info">
-                                <a class="btn btn-light btn-sm only-icon" href="images/gallery-img16.jpg"
-                                    data-lightbox="WeddingPhotos" title="Wedding Photos">
+                                <a class="btn btn-light btn-sm only-icon"
+                                    href="{{ asset('images/gallery-img16.jpg') }}" data-lightbox="WeddingPhotos"
+                                    title="Wedding Photos">
                                     <i class="fa fa-link"></i>
                                 </a>
                             </div>
-                            <img src="images/gallery-thumb16.jpg" alt="" width="380" height="380" />
+                            <img src="{{ asset('images/gallery-thumb16.jpg') }}" alt="" width="380"
+                                height="380" />
                         </li>
 
                         <li>
                             <div class="hover-info">
-                                <a class="btn btn-light btn-sm only-icon" href="images/gallery-img17.jpg"
-                                    data-lightbox="WeddingPhotos" title="Wedding Photos">
+                                <a class="btn btn-light btn-sm only-icon"
+                                    href="{{ asset('images/gallery-img17.jpg') }}" data-lightbox="WeddingPhotos"
+                                    title="Wedding Photos">
                                     <i class="fa fa-link"></i>
                                 </a>
                             </div>
-                            <img src="images/gallery-thumb17.jpg" alt="" width="380" height="380" />
+                            <img src="{{ asset('images/gallery-thumb17.jpg') }}" alt="" width="380"
+                                height="380" />
                         </li>
 
                         <li>
                             <div class="hover-info">
-                                <a class="btn btn-light btn-sm only-icon" href="images/gallery-img18.jpg"
-                                    data-lightbox="WeddingPhotos" title="Wedding Photos">
+                                <a class="btn btn-light btn-sm only-icon"
+                                    href="{{ asset('images/gallery-img18.jpg') }}" data-lightbox="WeddingPhotos"
+                                    title="Wedding Photos">
                                     <i class="fa fa-link"></i>
                                 </a>
                             </div>
-                            <img src="images/gallery-thumb18.jpg" alt="" width="380" height="380" />
+                            <img src="{{ asset('images/gallery-thumb18.jpg') }}" alt="" width="380"
+                                height="380" />
                         </li>
 
                         <li>
                             <div class="hover-info">
-                                <a class="btn btn-light btn-sm only-icon" href="images/gallery-img19.jpg"
-                                    data-lightbox="WeddingPhotos" title="Wedding Photos">
+                                <a class="btn btn-light btn-sm only-icon"
+                                    href="{{ asset('images/gallery-img19.jpg') }}" data-lightbox="WeddingPhotos"
+                                    title="Wedding Photos">
                                     <i class="fa fa-link"></i>
                                 </a>
                             </div>
-                            <img src="images/gallery-thumb19.jpg" alt="" width="380" height="380" />
+                            <img src="{{ asset('images/gallery-thumb19.jpg') }}" alt="" width="380"
+                                height="380" />
                         </li>
 
                         <li>
                             <div class="hover-info">
-                                <a class="btn btn-light btn-sm only-icon" href="images/gallery-img20.jpg"
-                                    data-lightbox="WeddingPhotos" title="Wedding Photos">
+                                <a class="btn btn-light btn-sm only-icon"
+                                    href="{{ asset('images/gallery-img20.jpg') }}" data-lightbox="WeddingPhotos"
+                                    title="Wedding Photos">
                                     <i class="fa fa-link"></i>
                                 </a>
                             </div>
-                            <img src="images/gallery-thumb20.jpg" alt="" width="380" height="380" />
+                            <img src="{{ asset('images/gallery-thumb20.jpg') }}" alt="" width="380"
+                                height="380" />
                         </li>
                     </ul>
                 </div>
@@ -1007,7 +1068,8 @@
                                         <a href="blog-single-post.html">
                                             <span class="btn btn-light"><i class="fa fa-file-o"></i> Read More</span>
                                         </a>
-                                        <img src="images/post1.jpg" alt="" width="793" height="494" />
+                                        <img src="{{ asset('images/post1.jpg') }}" alt="" width="793"
+                                            height="494" />
                                     </div>
 
                                     <div class="date">July 20, 2021</div>
@@ -1049,7 +1111,8 @@
                                         <a href="blog-single-post.html">
                                             <span class="btn btn-light"><i class="fa fa-file-o"></i> Read More</span>
                                         </a>
-                                        <img src="images/post2.jpg" alt="" width="793" height="494" />
+                                        <img src="{{ asset('images/post2.jpg') }}" alt="" width="793"
+                                            height="494" />
                                     </div>
 
                                     <div class="date">August 2, 2021</div>
@@ -1261,7 +1324,7 @@
 
     <!-- Google Maps API and Map Richmarker Library -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHOXsTqoSDPQ5eC5TChvgOf3pAVGapYog"></script>
-    <script src="js/richmarker.js"></script>
+    <script src="{{ asset('js/richmarker.js') }}"></script>
 
     <!-- Libs -->
     <script src="{{ asset('js/jquery-3.6.0.min.js') }} "></script>
