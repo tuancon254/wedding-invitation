@@ -11,24 +11,22 @@
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&amp;display=swap" rel="stylesheet"
             type="text/css" />
     </noscript>
-    <link rel="icon" href="{{ asset('images/heart-32.png')}}" type="image/x-icon">
-    {{-- <link rel="icon" href="images/fav_touch_icons/favicon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="images/fav_touch_icons/apple-touch-icon-180x180.png">
-    <link rel="manifest" href="images/fav_touch_icons/manifest.json"> --}}
+    <link rel="icon" href="{{ asset('images/heart-32.png') }}" type="image/x-icon">
     <!-- Bootstrap CSS -->
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet" />
 
     <!-- FontAwesome CSS -->
     <link href="{{ asset('css/fontawesome-all.min.css') }}" rel="stylesheet" />
-    {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" /> --}}
     <!-- Neela Icon Set CSS -->
     <link href="{{ asset('css/neela-icon-set.css') }}" rel="stylesheet" />
 
     <!-- Owl Carousel CSS -->
     <link href="{{ asset('css/owl.carousel.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset('css/jquery.minicolors.css') }}" rel="stylesheet" />
 
     <!-- Template CSS -->
     <link href="{{ asset('css/style.css') }}" rel="stylesheet" />
+    <link href="{{ asset('css/index.css') }}" rel="stylesheet" />
 
     <!-- Modernizr JS -->
     <script src="{{ asset('js/modernizr-3.6.0.min.js') }}"></script>
@@ -124,7 +122,6 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12">
-
                         <div class="hero-wrapper v-center">
                             <h2 data-animation-direction="fade" data-animation-delay="600">Save the Date</h2>
 
@@ -141,7 +138,6 @@
                                 <a href="#rsvp" class="btn btn-light scrollto">RSVP</a>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -1344,6 +1340,7 @@
 
     <!-- Hero Background Slideshow Script -->
     <script src="{{ asset('js/jquery.zoomslider.js') }}"></script>
+    <script src="{{ asset('js/jquery.minicolors.min.js') }}"></script>
 
     <!-- Template Scripts -->
     <script src="{{ asset('js/variables.js') }}"></script>
