@@ -82,3 +82,12 @@
 .map-info-container::before{
     content: none;
 }
+
+@font-face {
+    font-family: Great Vibes;
+    src: url('../webfonts/GreatVibes-Regular.ttf');
+}
+
+.hero-title{
+    font-family: Great Vibes !important;
+}

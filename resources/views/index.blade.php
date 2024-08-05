@@ -11,6 +11,10 @@
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&amp;display=swap" rel="stylesheet"
             type="text/css" />
     </noscript>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <link rel="icon" href="{{ asset('images/heart-32.png') }}" type="image/x-icon">
     <!-- Bootstrap CSS -->
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet" />
@@ -125,9 +129,10 @@
                         <div class="hero-wrapper v-center">
                             <h2 data-animation-direction="fade" data-animation-delay="600">Save the Date</h2>
 
-                            <h1 class="hero-title light ">
-                                <span data-animation-direction="from-right" data-animation-delay="300">Minh Tuan</span>
-                                <small data-animation-direction="from-top" data-animation-delay="300">&</small>
+                            <h1 class="hero-title light">
+                                <span data-animation-direction="from-right" data-animation-delay="300">Minh Tuấn</span>
+                                <small data-animation-direction="from-top" data-animation-delay="300"
+                                    class="mx-3">&</small>
                                 <span data-animation-direction="from-left" data-animation-delay="300">Minh Lan</span>
                             </h1>
 
@@ -152,11 +157,11 @@
                     <div class="element col-md-6 col-xl-4 offset-xl-2" data-animation-direction="from-left"
                         data-animation-delay="300">
                         <div class="image">
-                            <img src="{{ asset('images/groom.jpg') }}" alt="" width="600"
+                            <img src="{{ asset('images/groom.png') }}" alt="" width="600"
                                 height="714" />
                             <div class="hover-info neela-style">
                                 <div class="content">
-                                    <h3>Andrew Miller<small>The Groom</small></h3>
+                                    <h3>Minh Tuấn<small>The Groom</small></h3>
                                     <p>I am so incredibly blessed and excited to spend everyday for the rest of my life
                                         with my best friend!</p>
                                     <ul class="sn-icons">
@@ -176,11 +181,11 @@
                     <div class="element col-md-6 col-xl-4" data-animation-direction="from-right"
                         data-animation-delay="400">
                         <div class="image">
-                            <img src="{{ asset('images/bride.jpg') }}" alt="" width="600"
+                            <img src="{{ asset('images/bride.png') }}" alt="" width="600"
                                 height="714" />
                             <div class="hover-info neela-style">
                                 <div class="content">
-                                    <h3>Isabella Walker<small>The Bride</small></h3>
+                                    <h3>Minh Lan<small>The Bride</small></h3>
                                     <p>She's everything I've always dreamed of and I'm so excited to spend the rest of
                                         my life with her!</p>
                                     <ul class="sn-icons">
@@ -495,7 +500,7 @@
                             </div>
 
                             <div class="map-wrapper" data-animation-direction="fade" data-animation-delay="100">
-                                <div id="map_canvas" class="gmap"></div>
+                                <div id="map" class="gmap"  style="width: 100%; height: 450px; z-index:0;"></div>
 
                                 <div class="map_pins">
                                     <ul class="pins">
@@ -1346,12 +1351,15 @@
     <script src="{{ asset('js/scripts.js') }}"></script>
     <script src="{{ asset('js/template.settings.js') }}"></script>
     <script src="{{ asset('js/index.js') }}"></script>
+    <script src="{{ asset('js/jquery.minicolors.min.js') }}"></script>
 
     <!-- Google reCaptcha API -->
     {{-- <script src="../../../www.google.com/recaptcha/api.js" async defer></script> --}}
 
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     {{-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-7JZLG63NQZ"></script>
     <script>

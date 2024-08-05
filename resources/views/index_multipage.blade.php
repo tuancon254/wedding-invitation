@@ -146,8 +146,8 @@
                                 data-animation-delay="700"></div>
 
                             <h1 class="hero-title light">
-                                <span data-animation-direction="from-right" data-animation-delay="300">Minh Tuan</span>
-                                <small data-animation-direction="from-top" data-animation-delay="300">&</small>
+                                <span data-animation-direction="from-right" data-animation-delay="300">Minh Tuấn</span>
+                                <small data-animation-direction="from-top" data-animation-delay="300" class="mx-3">&</small>
                                 <span data-animation-direction="from-left" data-animation-delay="300">Minh Lan</span>
                             </h1>
 
@@ -252,10 +252,10 @@
                             </div>
 
                             <div class="invite_info">
-                                <h2 class="d-flex justify-content-between align-items-end" style="font-size: 37px">
+                                <h2 class="d-flex justify-content-between align-items-end" style="font-size: 40px; font-family: Great Vibes">
                                     <div>Minh Tuan</div>
                                     <small>&</small>
-                                    <div class="">Minh Lan</div>
+                                    <div>Minh Lan</div>
                                 </h2>
 
                                 <div class="uppercase">Request the honor of your presence on their wedding day</div>
