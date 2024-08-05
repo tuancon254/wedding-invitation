@@ -1319,8 +1319,8 @@
 
 
     <!-- Google Maps API and Map Richmarker Library -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHOXsTqoSDPQ5eC5TChvgOf3pAVGapYog"></script>
-    <script src="{{ asset('js/richmarker.js') }}"></script>
+    {{-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHOXsTqoSDPQ5eC5TChvgOf3pAVGapYog"></script>
+    <script src="{{ asset('js/richmarker.js') }}"></script> --}}
 
     <!-- Libs -->
     <script src="{{ asset('js/jquery-3.6.0.min.js') }} "></script>
@@ -1340,19 +1340,20 @@
 
     <!-- Hero Background Slideshow Script -->
     <script src="{{ asset('js/jquery.zoomslider.js') }}"></script>
-    <script src="{{ asset('js/jquery.minicolors.min.js') }}"></script>
 
     <!-- Template Scripts -->
     <script src="{{ asset('js/variables.js') }}"></script>
     <script src="{{ asset('js/scripts.js') }}"></script>
     <script src="{{ asset('js/template.settings.js') }}"></script>
+    <script src="{{ asset('js/index.js') }}"></script>
 
     <!-- Google reCaptcha API -->
     {{-- <script src="../../../www.google.com/recaptcha/api.js" async defer></script> --}}
 
-
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7JZLG63NQZ"></script>
+    {{-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-7JZLG63NQZ"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
 
@@ -1362,7 +1363,7 @@
         gtag('js', new Date());
 
         gtag('config', 'G-7JZLG63NQZ');
-    </script>
+    </script> --}}
 </body>
 
 </html>

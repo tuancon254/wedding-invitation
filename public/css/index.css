@@ -78,3 +78,7 @@
 #template-settings.form-style .checkbox {
     padding-left: 22px;
 }
+
+.map-info-container::before{
+    content: none;
+}
