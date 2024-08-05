@@ -1,7 +1,7 @@
 /**
  * Javascript variables
  */
- 
+
 //RTL support
 var rtl = false;                                //Set to true if your website is RTL. Otherwise, keep it false.
 
@@ -16,11 +16,11 @@ var hero_full_screen = true;                    //If true, the hero section will
 
 //HERO BACKGROUND SLIDESHOW IMAGES
 var slidehow_images = [
-    "images/hero-img1.jpg",
-    "images/hero-img2.jpg",
-    "images/hero-img3.jpg",
-    "images/hero-img4.jpg",
-    "images/hero-img5.jpg"
+    "images/hero-img6.jpg",
+    "images/hero-img7.jpg",
+    "images/hero-img8.jpg",
+    "images/hero-img9.jpg",
+    "images/hero-img10.jpg"
 ];
 
 //TIMELINE PARALLAX
