@@ -20,7 +20,7 @@ var slidehow_images = [
     "images/hero-img7.jpg",
     "images/hero-img8.jpg",
     "images/hero-img9.jpg",
-    "images/hero-img10.jpg"
+    // "images/hero-img10.jpg"
 ];
 
 //TIMELINE PARALLAX

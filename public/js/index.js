@@ -4,18 +4,22 @@ var map = L.map('map',{
     zoom: 16,
     scrollWheelZoom: false,
     zoomControl: false,
-    dragging: false
+    dragging: true
 });
 
-
+L.control.zoom({
+    position: 'bottomright'
+}).addTo(map);
 var greenIcon = L.icon({
-    iconUrl: 'https://img.icons8.com/fluency/48/home.png',
-    iconSize: [30, 30], // size of the icon
+    iconUrl: '../images/home1.png',
+    iconSize: [50, 50], // size of the icon
+    iconAnchor:   [10, 45],
 });
 
 var weddingIcon = L.icon({
-    iconUrl: '../images/arch.png',
-    iconSize: [30, 30], // size of the icon
+    iconUrl: '../images/arch4.png',
+    iconSize: [50, 50], // size of the icon
+    iconAnchor:   [0, 45],
 });
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);

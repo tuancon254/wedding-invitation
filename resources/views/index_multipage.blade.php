@@ -1,601 +1,181 @@
-<!DOCTYPE html>
+@extends('layouts.app')
 
-<head>
-    <meta charset="utf-8">
-
-    <!-- Page Title -->
-    <title>Tuan & Lan - Wedding Invitation</title>
-
-    <!-- Mobile Meta Tag -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-    <!-- Fav and touch icons -->
-    <link rel="icon" href="{{ asset('images/wedding-32.png') }}" sizes="any">
-    <link rel="icon" href="{{ asset('images/wedding-32.png') }}" type="image/svg+xml">
-    {{-- <link rel="apple-touch-icon" href="images/fav_touch_icons/apple-touch-icon-180x180.png">
-	<link rel="manifest" href="images/fav_touch_icons/manifest.json"> --}}
-    <!-- Google Web Fonts -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&amp;display=swap" as="style"
-        onload="this.onload=null;this.rel='stylesheet'" />
-    <noscript>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&amp;display=swap" rel="stylesheet"
-            type="text/css" />
-    </noscript>
-
-
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-    <!-- Bootstrap CSS -->
-    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet" />
-
-    <!-- FontAwesome CSS -->
-    <link href="{{ asset('css/fontawesome-all.min.css') }}" rel="stylesheet" />
-
-    <!-- Neela Icon Set CSS -->
-    <link href="{{ asset('css/neela-icon-set.css') }}" rel="stylesheet" />
-
-    <!-- Owl Carousel CSS -->
-    <link href="{{ asset('css/owl.carousel.min.css') }}" rel="stylesheet" />
-    <link href="{{ asset('css/jquery.minicolors.css') }}" rel="stylesheet" />
-
-    <!-- Template CSS -->
-    <link href="{{ asset('css/style.css') }}" rel="stylesheet" />
-    <link href="{{ asset('css/index.css') }}" rel="stylesheet" />
-
-    <!-- Modernizr JS -->
-    <script src="{{ asset('js/modernizr-3.6.0.min.js') }}"></script>
-
-</head>
-
-<body>
-
-    <!-- BEGIN PRELOADER -->
-    <div id="preloader">
-        <div class="loading-heart">
-            <svg viewBox="0 0 512 512" width="100">
-                <path
-                    d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z" />
-            </svg>
-            <div class="preloader-title">
-                Lan<br>
-                <small>&</small><br>
-                Tuan
-            </div>
-        </div>
-    </div>
-    <!-- END PRELOADER -->
-
-
-    <!-- BEGIN WRAPPER -->
-    <div id="wrapper">
-
-        <!-- BEGIN HEADER -->
-        <header id="header">
-            <div class="nav-section">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <a href="#hero" class="nav-logo"><img src="images/logo.png" alt="Neela" /></a>
-
-                            <!-- BEGIN MAIN MENU -->
-                            <nav class="navbar">
-
-                                <ul class="nav navbar-nav">
-                                    <li><a href="#hero">Home</a></li>
-
-                                    <li><a href="about-us.html">About Us</a></li>
-
-                                    <li class="dropdown">
-                                        <a href="wedding-details.html" data-toggle="dropdown" data-hover="dropdown">The
-                                            Wedding<b class="caret"></b></a>
-                                        <ul class="dropdown-menu">
-                                            <li><a href="wedding-details.html">Wedding Details</a></li>
-                                            <li><a href="wedding-party.html">Wedding Party</a></li>
-                                        </ul>
-                                    </li>
-
-                                    <li class="dropdown">
-                                        <a href="gallery.html" data-toggle="dropdown" data-hover="dropdown">Gallery<b
-                                                class="caret"></b></a>
-                                        <ul class="dropdown-menu">
-                                            <li><a href="gallery.html">Gallery 2 Columns</a></li>
-                                            <li><a href="gallery-2.html">Gallery 3 Columns</a></li>
-                                            <li><a href="gallery-3.html">Gallery 4 Columns</a></li>
-                                        </ul>
-                                    </li>
-
-                                    <li class="dropdown">
-                                        <a href="blog-listing-sidebar-right.html" data-toggle="dropdown"
-                                            data-hover="dropdown">Blog<b class="caret"></b></a>
-                                        <ul class="dropdown-menu">
-                                            <li><a href="blog-single-post.html">Blog Single Post</a></li>
-                                            <li><a href="blog-listing-sidebar-left.html">Blog Sidebar Left</a></li>
-                                            <li><a href="blog-listing-sidebar-right.html">Blog Sidebar Right</a></li>
-                                            <li><a href="blog-listing-no-sidebar-1.html">Blog Without Sidebar 1</a></li>
-                                            <li><a href="blog-listing-no-sidebar-2.html">Blog Without Sidebar 2</a></li>
-                                        </ul>
-                                    </li>
-
-                                    <li><a href="gift-registry.html">Registry</a></li>
-
-                                    <li><a href="rsvp.html">RSVP</a></li>
-                                </ul>
-
-                                <button id="nav-mobile-btn"><i
-                                        class="fas fa-bars"></i></button><!-- Mobile menu button -->
-                            </nav>
-                            <!-- END MAIN MENU -->
-
+@section('content')
+    <!-- BEGIN HERO SECTION -->
+    <div id="hero" class="bg-slideshow section-divider-bottom-1 section-divider-bg-color">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="v-center">
+                        <div class="hero-divider-top light" data-animation-direction="from-top" data-animation-delay="700">
                         </div>
+
+                        <h1 class="hero-title light">
+                            <span data-animation-direction="from-right" data-animation-delay="300">Minh Tuấn</span>
+                            <small data-animation-direction="from-top" data-animation-delay="300" class="mx-3">&</small>
+                            <span data-animation-direction="from-left" data-animation-delay="300">Minh Lan</span>
+                        </h1>
+
+                        <div class="hero-divider-bottom light" data-animation-direction="from-bottom"
+                            data-animation-delay="700"></div>
+
+                        <div class="hero-subtitle light">Are getting Married in</div>
+
+                        <div class="countdown" data-date="2024/09/08 11:30 AM"></div>
                     </div>
                 </div>
             </div>
-        </header>
-        <!-- END HEADER -->
+        </div>
+    </div>
 
 
-        <!-- BEGIN HERO SECTION -->
-        <div id="hero" class="bg-slideshow section-divider-bottom-1 section-divider-bg-color">
+    <!-- BEGIN BRIDE & GROOM SECTION -->
+    <section class="section-bg-color overflow-content-over no-padding-top">
+
+        <div class="section-bg-color overflow-content no-padding">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-12">
-                        <div class="v-center">
-                            <div class="hero-divider-top light" data-animation-direction="from-top"
-                                data-animation-delay="700"></div>
+                    <div class="col overflow-image-wrapper">
 
-                            <h1 class="hero-title light">
-                                <span data-animation-direction="from-right" data-animation-delay="300">Minh Tuấn</span>
-                                <small data-animation-direction="from-top" data-animation-delay="300" class="mx-3">&</small>
-                                <span data-animation-direction="from-left" data-animation-delay="300">Minh Lan</span>
-                            </h1>
+                        <div class="overflow-image-text extra-padding-top">
+                            <h2 class="title">He asker her & she said yes!</h2>
+                            <p class="center">Phasellus a sapien tincidunt nunc dapibus mollis. Etiam ultricies
+                                bibendum sodales. Nulla libero tortor, auctor at elit ut, pharetra placerat libero.
+                                Aenean gravida in libero sed tincidunt. Nulla non mattis nisl, in imperdiet justo.
+                                Proin metus mauris, gravida vel ante et, ornare laoreet libero sed ut quam vitae.
+                                Aenean aliquam augue turpis, in tempor elit condimentum sit amet. Aenean aliquam
+                                augue turpis, in tempor elit condimentum sit amet. Phasellus a sapien tincidunt nunc
+                                dapibus mollis. Etiam ultricies bibendum sodales.</p>
+                            <p class="center"><a class="btn btn-primary" href="about-us.html">Our Love Story</a>
+                            </p>
+                        </div>
 
-                            <div class="hero-divider-bottom light" data-animation-direction="from-bottom"
-                                data-animation-delay="700"></div>
-
-                            <div class="hero-subtitle light">Are getting Married in</div>
-
-                            <div class="countdown" data-date="2024/09/08 11:30 AM"></div>
+                        <div class="overflow-image flower">
+                            <img src="{{ asset('images/bride_groom.jpg') }}" alt="Couple Photo">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        {{-- <section id="hero" class="section-divider-bottom-1">
-			<video poster="images/hero-img2.jpg" class="background-video" playsinline autoplay muted loop>
-				<source src="images/landscape.mp4" type="video/mp4">
-			</video>
-
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-12 v-center">
-						<div class="hero-divider-top light" data-animation-direction="from-top" data-animation-delay="600"></div>
-
-						<h1 class="hero-title light">
-							<span data-animation-direction="from-right" data-animation-delay="300">Minh Tuan</span>
-							<small data-animation-direction="from-top" data-animation-delay="300">&</small>
-							<span data-animation-direction="from-left" data-animation-delay="300">Minh lan</span>
-						</h1>
-
-						<div class="hero-divider-bottom light" data-animation-direction="from-bottom" data-animation-delay="600"></div>
-
-						<div class="hero-subtitle light" data-animation-direction="from-top" data-animation-delay="750">Are getting Married in</div>
-
-						<!--
-                        Countdown container
-						Use the data attribute "date" to set the countdown date.
-						E.g.: data-date="2025/09/20 3:00 PM"
-                        -->
-						<div class="countdown" data-date="2025/09/20 3:00 PM" data-animation-direction="from-bottom" data-animation-delay="800"></div>
-					</div>
-				</div>
-			</div>
-		</section> --}}
-        <!-- END HERO SECTION -->
+    </section>
+    <!-- END BRIDE & GROOM SECTION -->
 
 
-        <!-- BEGIN BRIDE & GROOM SECTION -->
-        <section class="section-bg-color overflow-content-over no-padding-top">
+    <!-- BEGIN WEDDING INVITE SECTION -->
+    @include('components.invitation')
+    <!-- END WEDDING INVITE SECTION -->
 
-            <div class="section-bg-color overflow-content no-padding">
-                <div class="container">
-                    <div class="row">
-                        <div class="col overflow-image-wrapper">
+    @include('components.location')
 
-                            <div class="overflow-image-text extra-padding-top">
-                                <h2 class="title">He asker her & she said yes!</h2>
-                                <p class="center">Phasellus a sapien tincidunt nunc dapibus mollis. Etiam ultricies
-                                    bibendum sodales. Nulla libero tortor, auctor at elit ut, pharetra placerat libero.
-                                    Aenean gravida in libero sed tincidunt. Nulla non mattis nisl, in imperdiet justo.
-                                    Proin metus mauris, gravida vel ante et, ornare laoreet libero sed ut quam vitae.
-                                    Aenean aliquam augue turpis, in tempor elit condimentum sit amet. Aenean aliquam
-                                    augue turpis, in tempor elit condimentum sit amet. Phasellus a sapien tincidunt nunc
-                                    dapibus mollis. Etiam ultricies bibendum sodales.</p>
-                                <p class="center"><a class="btn btn-primary" href="about-us.html">Our Love Story</a>
-                                </p>
+
+    <!-- BEGIN CONTACTS SECTION -->
+    <section id="rsvp-2" class="section-bg-color extra-padding-section">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-10 offset-lg-1 col-xl-8 offset-xl-2  col-xxl-6 offset-xxl-3">
+
+                    <div class="form-wrapper flowers neela-style">
+                        <h2 class="section-title">Will you Attend?</h2>
+
+                        <form id="form-rsvp" method="post" action="#">
+
+                            <div class="form-floating">
+                                <input type="text" name="Name" id="name" placeholder="Your Name*"
+                                    class="form-control required fromName">
+                                <label for="name">Your Name*</label>
                             </div>
 
-                            <div class="overflow-image flower">
-                                <img src="{{ asset('images/bride_groom.jpg') }}" alt="Couple Photo">
+                            <div class="form-floating">
+                                <input type="email" name="E-mail" id="email" placeholder="E-mail*"
+                                    class="form-control required fromEmail">
+                                <label for="email">E-mail*</label>
                             </div>
-                        </div>
+
+                            <div class="form-check-wrapper">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input required" type="radio" name="Attend wedding"
+                                        id="attend_wedding_yes">
+                                    <label for="attend_wedding_yes">Yes, I will attend.</label>
+                                </div>
+
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input required" type="radio" name="Attend wedding"
+                                        id="attend_wedding_no">
+                                    <label for="attend_wedding_no">Sorry, I can't come.</label>
+                                </div>
+                            </div>
+
+                            <div class="form-floating">
+                                <select class="form-select" aria-label="Number of guests" name="Number of Guests"
+                                    id="num_guests">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                </select>
+
+                                <label for="num_guests">Number of guests</label>
+                            </div>
+
+                            <fieldset class="form-check-wrapper required" name="Meal Preferences" id="meal_pref">
+                                <label>Meal Preferences:</label>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="meal_meat">
+                                    <label for="meal_meat">
+                                        Meat
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="meal_fish">
+                                    <label for="meal_fish">
+                                        Fish
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="meal_vegetarian">
+                                    <label for="meal_vegetarian">
+                                        Vegetarian
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value=""
+                                        id="meal_gluten_free">
+                                    <label for="meal_gluten_free">
+                                        Gluten free
+                                    </label>
+                                </div>
+                            </fieldset>
+
+                            <div class="form-floating">
+                                <textarea id="message" name="Message" placeholder="Message" class="form-control" rows="4"></textarea>
+                                <label for="message">Message</label>
+                            </div>
+
+                            <div class="center">
+                                <div class="g-recaptcha" data-sitekey="6LcTJDEUAAAAACOL__6CedRrCb6m2M94OSmqF4MV">
+                                </div>
+                            </div>
+
+                            <div class="form_status_message"></div>
+
+                            <div class="center">
+                                <button type="submit" class="btn btn-primary submit_form">Send</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
-
-        </section>
-        <!-- END BRIDE & GROOM SECTION -->
-
-
-        <!-- BEGIN WEDDING INVITE SECTION -->
-        <section id="the-wedding"
-            class="parallax-background bg-color-overlay padding-divider-top section-divider-bottom-1">
-            <div class="section-divider-top-1 off-section"></div>
-            <!-- The class "section-divider-top-1" can also be applied to the tag <section>. In this case, it was added on a new <div> because the tag <section> have all pseudo elements (::after and ::before) in use. -->
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <h1 class="section-title light">Invitation</h1>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-12 col-lg-10 offset-lg-1 col-xl-8 offset-xl-2 center">
-                        <div class="invite neela-style" data-animation-direction="from-left"
-                            data-animation-delay="100">
-                            <div class="invite_title">
-                                <div class="text">
-                                    Save<small>the</small>Date
-                                </div>
-                            </div>
-
-                            <div class="invite_info">
-                                <h2 class="d-flex justify-content-between align-items-end" style="font-size: 40px; font-family: Great Vibes">
-                                    <div>Minh Tuan</div>
-                                    <small>&</small>
-                                    <div>Minh Lan</div>
-                                </h2>
-
-                                <div class="uppercase">Request the honor of your presence on their wedding day</div>
-                                <div class="date">September 08, 2024<small>at 11:30 am</small></div>
-                                <div class="uppercase">Ha Duong Place<br>431 Tam Trinh, Hoang Mai, Ha Noi</div>
-
-                                <h5>Reception to follow</h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- END WEDDING INVITE SECTION -->
-
-        <!-- BEGIN WEDDING DETAILS SECTION -->
-        {{-- <section id="wedding-details" class="bg-color">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-4 wedding-details light">
-						<i class="icon-big-church"></i>
-						<h4>Ceremony<small>03:00 PM - 04:00 PM</small></h4>
-						<p>BIRCHWOOD CHURCH<br>4181 Birchwood Ave Seal Beach, CA<br>33.776825, -118.059113</p>
-						<a href="wedding-details.html" class="btn btn-light">Learn More</a>
-					</div>
-
-					<div class="col-md-4 wedding-details light">
-						<i class="icon-photo-camera"></i>
-						<h4>Photoshoot<small>05:00 PM - 06:30 PM</small></h4>
-						<p>OLD RANCH COUNTRY CLUB<br>29033 West Lake Drive, Agoura Hills, CA<br>33.776025, -118.065314</p>
-						<a href="wedding-details.html" class="btn btn-light">Learn More</a>
-					</div>
-
-					<div class="col-md-4 wedding-details light">
-						<i class="icon-champagne-glasses"></i>
-						<h4>Reception<small>07:00 PM - 01:00 PM</small></h4>
-						<p>OLD RANCH COUNTRY CLUB<br>29033 West Lake Drive, Agoura Hills, CA<br>33.776025, -118.065314</p>
-						<a href="wedding-details.html" class="btn btn-light">Learn More</a>
-					</div>
-				</div>
-			</div>
-		</section> --}}
-        <!-- END WEDDING DETAILS SECTION -->
-
-        <section id="location">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <h2 class="section-title">Location</h2>
-                    </div>
-                </div>
-            </div>
-
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 col-xl-10 offset-xl-1">
-
-                        <div class="map-info-container">
-                            <div class="info-wrapper" data-animation-direction="from-bottom"
-                                data-animation-delay="100">
-                                <div class="location-info">
-                                    <div class="neela-style">
-                                        <h4 class="has-icon"><i
-                                                class="icon-big-church"></i>Ceremony<small>11:30am</small></h4>
-                                        <h5>Ha Duong Place</h5>
-                                        <p>431 Tam Trinh Street, Hoang Mai, Hanoi<br>20.9840881, 105.8649795</p>
-
-                                        <div class="info-map-divider"></div>
-
-                                        <h4 class="has-icon"><i
-                                                class="icon-champagne-glasses"></i>Home<small>09:30am</small></h4>
-                                        <h5>Home</h5>
-                                        <p>8/299 Hoang Mai Street, Hoang Mai, Hanoi<br>20.9873349, 105.8610204</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="map-wrapper" data-animation-direction="fade" data-animation-delay="100">
-                                <div id="map" class="gmap" style="width: 100%; height: 450px; z-index:0;"></div>
-
-                                <div class="map_pins">
-                                    <ul class="pins">
-                                        <li><i class="fas fa-bell"></i>Ceremony</li>
-                                        <li><i class="fas fa-glass-cheers"></i>Reception</li>
-                                        <li><i class="fas fa-bed"></i>Accomodations</li>
-                                        <li><i class="fas fa-plane"></i>Transportation</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            {{-- <div id="map" style="height: 180px"></div> --}}
-                        </div>
-
-                        {{-- <div class="center">
-                            <a href="#rsvp" class="btn btn-primary scrollto">RSVP</a>
-                        </div> --}}
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <!-- BEGIN CONTACTS SECTION -->
-        <section id="rsvp-2" class="section-bg-color extra-padding-section">
-            <div class="container">
-
-                <div class="row">
-                    <div class="col-lg-10 offset-lg-1 col-xl-8 offset-xl-2  col-xxl-6 offset-xxl-3">
-
-                        <div class="form-wrapper flowers neela-style">
-                            <h2 class="section-title">Will you Attend?</h2>
-
-                            <form id="form-rsvp" method="post" action="#">
-
-                                <div class="form-floating">
-                                    <input type="text" name="Name" id="name" placeholder="Your Name*"
-                                        class="form-control required fromName">
-                                    <label for="name">Your Name*</label>
-                                </div>
-
-                                <div class="form-floating">
-                                    <input type="email" name="E-mail" id="email" placeholder="E-mail*"
-                                        class="form-control required fromEmail">
-                                    <label for="email">E-mail*</label>
-                                </div>
-
-                                <div class="form-check-wrapper">
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input required" type="radio" name="Attend wedding"
-                                            id="attend_wedding_yes">
-                                        <label for="attend_wedding_yes">Yes, I will attend.</label>
-                                    </div>
-
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input required" type="radio" name="Attend wedding"
-                                            id="attend_wedding_no">
-                                        <label for="attend_wedding_no">Sorry, I can't come.</label>
-                                    </div>
-                                </div>
-
-                                <div class="form-floating">
-                                    <select class="form-select" aria-label="Number of guests" name="Number of Guests"
-                                        id="num_guests">
-                                        <option value="0">0</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>
-                                        <option value="7">7</option>
-                                    </select>
-
-                                    <label for="num_guests">Number of guests</label>
-                                </div>
-
-                                <fieldset class="form-check-wrapper required" name="Meal Preferences" id="meal_pref">
-                                    <label>Meal Preferences:</label>
-
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value=""
-                                            id="meal_meat">
-                                        <label for="meal_meat">
-                                            Meat
-                                        </label>
-                                    </div>
-
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value=""
-                                            id="meal_fish">
-                                        <label for="meal_fish">
-                                            Fish
-                                        </label>
-                                    </div>
-
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value=""
-                                            id="meal_vegetarian">
-                                        <label for="meal_vegetarian">
-                                            Vegetarian
-                                        </label>
-                                    </div>
-
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value=""
-                                            id="meal_gluten_free">
-                                        <label for="meal_gluten_free">
-                                            Gluten free
-                                        </label>
-                                    </div>
-                                </fieldset>
-
-                                <div class="form-floating">
-                                    <textarea id="message" name="Message" placeholder="Message" class="form-control" rows="4"></textarea>
-                                    <label for="message">Message</label>
-                                </div>
-
-                                <div class="center">
-                                    <div class="g-recaptcha" data-sitekey="6LcTJDEUAAAAACOL__6CedRrCb6m2M94OSmqF4MV">
-                                    </div>
-                                </div>
-
-                                <div class="form_status_message"></div>
-
-                                <div class="center">
-                                    <button type="submit" class="btn btn-primary submit_form">Send</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- END CONTACTS SECTION -->
-
-
-        <!-- BEGIN FOOTER -->
-        <footer id="footer">
-            <div class="footer-widget-area">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="widget widget-contact-info">
-                                <a href="index-multipage.html"><img src="{{ asset('images/logo.png') }}"
-                                        alt="Neela Logo"></a>
-
-                                <ul class="contact-info">
-                                    <li><span>Visit Us:</span> 4181 Birchwood Ave Seal Beach, CA</li>
-                                    <li><span>Phone:</span> +0012 345-6789-101</li>
-                                    <li><span>E-mail:</span> <a
-                                            href="mailto:isabella.andrew@example.com">isabella.andrew@example.com</a>
-                                    </li>
-                                </ul>
-
-                                <ul class="sn-icons">
-                                    <li><a href="#"><i class="fab fa-instagram-square"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="col-md-4">
-                            <div class="widget widget-quick-links">
-                                <h2 class="widget-title">Quick Links</h2>
-
-                                <ul>
-                                    <li><a href="about-us.html">Our Story</a></li>
-                                    <li><a href="wedding-details.html">Wedding Details</a></li>
-                                    <li><a href="wedding-party.html">Wedding Party</a></li>
-                                    <li><a href="gift-registry.html">Gift Registry</a></li>
-                                    <li><a href="rsvp.html">RSVP</a></li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="col-md-4">
-                            <div class="widget widget-newsletter light">
-                                <h2 class="widget-title">Subscribe to our Newsletter</h2>
-
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget
-                                    dolor aenean massa.</p>
-
-                                <form class="searchform" role="search" method="get" action="#">
-                                    <div class="form-floating">
-                                        <button type="submit" id="submit_btn" class="search-submit"><i
-                                                class="far fa-envelope"></i></button>
-                                        <input type="text" id="nl_email" class="form-control" name="nl_email"
-                                            placeholder="E-mail" value="">
-                                        <label for="nl_email">E-mail</label>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="copyright">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-12">
-                            &copy; 2021 <a href="https://www.wiselythemes.com/">WiselyThemes</a>, All Rights Reserved.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        <!-- END FOOTER -->
-
-    </div>
-    <!-- END WRAPPER -->
-
-
-    <!-- Google Maps API and Map Richmarker Library -->
-    {{-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHOXsTqoSDPQ5eC5TChvgOf3pAVGapYog"></script>
-    <script src="{{ asset('js/richmarker.js') }}"></script> --}}
-
-    <!-- Libs -->
-    <script src="{{ asset('js/jquery-3.6.0.min.js') }}"></script>
-    <script src="{{ asset('js/jquery-ui.min.js') }}"></script>
-    <script src="{{ asset('js/jquery-migrate-3.3.2.min.js') }}"></script>
-    <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
-    <script src="{{ asset('js/jquery.placeholder.min.js') }}"></script>
-    <script src="{{ asset('js/ismobile.js') }}"></script>
-    <script src="{{ asset('js/retina.min.js') }}"></script>
-    <script src="{{ asset('js/waypoints.min.js') }}"></script>
-    <script src="{{ asset('js/waypoints-sticky.min.js') }}"></script>
-    <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
-    <script src="{{ asset('js/lightbox.min.js') }}"></script>
-
-    <!-- Nicescroll script to handle gallery section touch slide -->
-    <script src="{{ asset('js/jquery.nicescroll.js') }}"></script>
-
-    <!-- Hero Background Slideshow Script -->
-    <script src="{{ asset('js/jquery.zoomslider.js') }}"></script>
-
-    <!-- Template Scripts -->
-    <script src="{{ asset('js/variables.js') }}"></script>
-    <script src="{{ asset('js/scripts.js') }}"></script>
-    <script src="{{ asset('js/jquery.minicolors.min.js') }}"></script>
-    <script src="{{ asset('js/index.js') }}"></script>
-
-    <!-- Google reCaptcha API -->
-    {{-- <script src="../../../www.google.com/recaptcha/api.js" async defer></script> --}}
-
-
-    <script src="{{ asset('js/template.settings.js') }}"></script>
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    {{-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-7JZLG63NQZ"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-
-        gtag('config', 'G-7JZLG63NQZ');
-    </script> --}}
-</body>
-
-</html>
+        </div>
+    </section>
+    <!-- END CONTACTS SECTION -->
+@endsection
