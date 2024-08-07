@@ -32,16 +32,7 @@
                     </div>
 
                     <div class="map-wrapper" data-animation-direction="fade" data-animation-delay="100">
-                        <div id="map" class="gmap" style="width: 100%; height: 450px; z-index:0;"></div>
-
-                        <div class="map_pins">
-                            <ul class="pins">
-                                <li><i class="fas fa-bell"></i>Ceremony</li>
-                                <li><i class="fas fa-glass-cheers"></i>Reception</li>
-                                <li><i class="fas fa-bed"></i>Accomodations</li>
-                                <li><i class="fas fa-plane"></i>Transportation</li>
-                            </ul>
-                        </div>
+                        <div id="map" class="gmap" style="width: 100%; height: 550px; z-index:0;"></div>
                     </div>
                 </div>
 

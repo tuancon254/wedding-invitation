@@ -791,15 +791,6 @@ var Neela;
                                           (r += 1))));
                     }),
                     (c += "&len=" + r),
-                    u(".g-recaptcha").length &&
-                        (c += "&recaptcha=" + grecaptcha.getResponse()),
-                    (t = function () {
-                        u(".form_status_message").html(
-                            '<div class="alert alert-success alert-dismissible fade show" role="alert">' +
-                                m.contactFormSuccessMsg +
-                                '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>'
-                        );
-                    }),
                     (a = function () {
                         u(".fa-spinner", o).remove(), o.removeClass("disabled");
                     }),
@@ -812,18 +803,23 @@ var Neela;
                           o.addClass("disabled"),
                           u.ajax({
                               type: "POST",
-                              url: "contact.php",
-                              data: c,
+                              url: '/rsvp',
+                              data: {
+                                "_token": $('#token').val(),
+                                "data": c
+                              },
                               success: function (e) {
-                                  a(),
-                                      "ok" === e
-                                          ? (t(), i[0].reset())
-                                          : m.showError(
-                                                m.contactFormRecaptchaErrorMsg
-                                            ),
-                                      (m.sendingMail = !1),
-                                      u(".g-recaptcha").length &&
-                                          grecaptcha.reset();
+                                console.log(e);
+
+                                //   a(),
+                                //       "ok" === e
+                                //           ? (t(), i[0].reset())
+                                //           : m.showError(
+                                //                 m.contactFormRecaptchaErrorMsg
+                                //             ),
+                                //       (m.sendingMail = !1),
+                                //       u(".g-recaptcha").length &&
+                                //           grecaptcha.reset();
                               },
                               error: function () {
                                   a(), m.showError(), (m.sendingMail = !1);

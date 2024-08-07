@@ -20,4 +20,11 @@ class WeddingController extends Controller
         return view('index_multipage');
     }
 
+    public function rsvp(Request $request)
+    {
+        dd($request->all());
+        return response()->json([
+            'message' => 'success'
+        ]);
+    }
 }

@@ -1,7 +1,7 @@
 var map = L.map('map',{
     doubleClickZoom: false,
-    center: [20.98629189892332, 105.86300548132999],
-    zoom: 16,
+    center: [20.98585302485291, 105.86256283729534],
+    zoom: 17,
     scrollWheelZoom: false,
     zoomControl: false,
     dragging: true

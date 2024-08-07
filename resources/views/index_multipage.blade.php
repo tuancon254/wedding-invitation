@@ -51,7 +51,7 @@
                         </div>
 
                         <div class="overflow-image flower">
-                            <img src="{{ asset('images/bride_groom.jpg') }}" alt="Couple Photo">
+                            <img src="{{ asset('images/bride_groom4.jpg') }}" alt="Couple Photo">
                         </div>
                     </div>
                 </div>
@@ -72,13 +72,12 @@
     <!-- BEGIN CONTACTS SECTION -->
     <section id="rsvp-2" class="section-bg-color extra-padding-section">
         <div class="container">
-
             <div class="row">
                 <div class="col-lg-10 offset-lg-1 col-xl-8 offset-xl-2  col-xxl-6 offset-xxl-3">
 
                     <div class="form-wrapper flowers neela-style">
                         <h2 class="section-title">Will you Attend?</h2>
-
+                        <input type="hidden" name="_token" id="token" value="{{ csrf_token() }}">
                         <form id="form-rsvp" method="post" action="#">
 
                             <div class="form-floating">
@@ -89,8 +88,19 @@
 
                             <div class="form-floating">
                                 <input type="email" name="E-mail" id="email" placeholder="E-mail*"
-                                    class="form-control required fromEmail">
-                                <label for="email">E-mail*</label>
+                                    class="form-control fromEmail">
+                                <label for="email">E-mail (Optional)</label>
+                            </div>
+
+                            <div class="form-floating">
+                                <select class="form-select required" aria-label="FriendOf" name="FriendOf"
+                                    id="friend_of">
+                                    <option value=""></option>
+                                    <option value="groom">Groom</option>
+                                    <option value="bride">Bride</option>
+                                </select>
+
+                                <label for="friend_of">Friend Of</label>
                             </div>
 
                             <div class="form-check-wrapper">
@@ -108,57 +118,14 @@
                             </div>
 
                             <div class="form-floating">
-                                <select class="form-select" aria-label="Number of guests" name="Number of Guests"
-                                    id="num_guests">
-                                    <option value="0">0</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                    <option value="6">6</option>
-                                    <option value="7">7</option>
-                                </select>
-
-                                <label for="num_guests">Number of guests</label>
+                                <input type="number" name="number_of_guest" id="number_of_guest" placeholder="Number of guests" min="0" max="10"
+                                    class="form-control required numberOfGuest">
+                                <label for="number_of_guest">Number of guests</label>
                             </div>
-
-                            <fieldset class="form-check-wrapper required" name="Meal Preferences" id="meal_pref">
-                                <label>Meal Preferences:</label>
-
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="meal_meat">
-                                    <label for="meal_meat">
-                                        Meat
-                                    </label>
-                                </div>
-
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="meal_fish">
-                                    <label for="meal_fish">
-                                        Fish
-                                    </label>
-                                </div>
-
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="meal_vegetarian">
-                                    <label for="meal_vegetarian">
-                                        Vegetarian
-                                    </label>
-                                </div>
-
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value=""
-                                        id="meal_gluten_free">
-                                    <label for="meal_gluten_free">
-                                        Gluten free
-                                    </label>
-                                </div>
-                            </fieldset>
 
                             <div class="form-floating">
                                 <textarea id="message" name="Message" placeholder="Message" class="form-control" rows="4"></textarea>
-                                <label for="message">Message</label>
+                                <label for="message">Wishes to the bride and groom</label>
                             </div>
 
                             <div class="center">

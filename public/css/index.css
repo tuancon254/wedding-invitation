@@ -91,3 +91,7 @@
 .hero-title{
     font-family: Great Vibes !important;
 }
+
+.overflow-image{
+    background-position: unset !important;
+}
