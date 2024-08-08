@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
-                    <a href="#hero" class="nav-logo"><img src="{{ asset('images/logo.png') }}" alt="Neela" /></a>
+                    <a href="#hero" class="nav-logo"><img src="{{ asset('images/signature4.png') }}" alt="Neela" /></a>
 
                     <!-- BEGIN MAIN MENU -->
                     <nav class="navbar">

@@ -16,17 +16,18 @@
                     <div class="info-wrapper" data-animation-direction="from-bottom" data-animation-delay="100">
                         <div class="location-info">
                             <div class="neela-style">
-                                <h4 class="has-icon"><i class="icon-big-church"></i>Ceremony<small>11:30am</small>
+                                <h4>Ceremony
                                 </h4>
                                 <h5>Ha Duong Place</h5>
-                                <p>431 Tam Trinh Street, Hoang Mai, Hanoi<br>20.9840881, 105.8649795</p>
+                                <p>431 Tam Trinh Street, Hoang Mai, Hanoi<br>20.9841181, 105.8647972</p>
+                                <h5 class="mt-1 see-in-map" data-location="20.9841181, 105.8647972">See in map ></h5>
 
                                 <div class="info-map-divider"></div>
 
-                                <h4 class="has-icon"><i class="icon-champagne-glasses"></i>Home<small>09:30am</small>
+                                <h4>Home
                                 </h4>
-                                <h5>Home</h5>
                                 <p>8/299 Hoang Mai Street, Hoang Mai, Hanoi<br>20.9873349, 105.8610204</p>
+                                <h5 class="mt-1 see-in-map" data-location="20.98731236240082, 105.86090797975427">See in map ></h5>
                             </div>
                         </div>
                     </div>

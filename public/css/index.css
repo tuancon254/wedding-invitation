@@ -106,3 +106,15 @@
 .footer-logo{
     font-family: "Great Vibes";
 }
+
+.see-in-map{
+    cursor: pointer;
+}
+
+.see-in-map:hover{
+    color: #f7f8fa !important;
+}
+
+#map:focus{
+    outline: none;
+}
