@@ -13,7 +13,7 @@ $(document).ready(function () {
             position: "bottomright",
         })
         .addTo(map);
-    var greenIcon = L.icon({
+    var homeIcon = L.icon({
         iconUrl: "../images/home1.png",
         iconSize: [50, 50], // size of the icon
         iconAnchor: [10, 45],
@@ -27,10 +27,20 @@ $(document).ready(function () {
 
     L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png").addTo(map);
 
-    L.marker([20.9841181, 105.8647972], { icon: weddingIcon }).addTo(map);
-    L.marker([20.98731236240082, 105.86090797975427], {
-        icon: greenIcon,
-    }).addTo(map);
+    L.marker([20.9841181, 105.8647972], { icon: weddingIcon }).addTo(map).on('click', openMapLocation);
+    L.marker([20.98731236240082, 105.86090797975427], { icon: homeIcon }).addTo(map).on('click', openMapLocation);
+
+    function openMapLocation(){
+        var lat = this.getLatLng().lat;
+        var lng = this.getLatLng().lng;
+        var googleMapsUrl = "https://www.google.com/maps?q=" + lat + "," + lng;
+
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+            window.location.href = "geo:" + lat + "," + lng + "?q=" + lat + "," + lng;
+        } else {
+            window.open(googleMapsUrl, '_blank');
+        }
+    }
 
     $(".see-in-map").click(function () {
         let latLong = $(this).data("location");
@@ -43,6 +53,7 @@ $(document).ready(function () {
 
         $('#map').focus()
     });
+
 
     $("#form-rsvp").on("submit", function (event) {
         event.preventDefault();
@@ -69,7 +80,6 @@ $(document).ready(function () {
         if (!error) {
             let formData = $(this).serialize();
             let attendWedding = $('input[name="will_come"]:checked').val();
-            console.log(attendWedding);
             formData += "&will_come=" + attendWedding;
             $.ajax({
                 type: "POST",
@@ -79,7 +89,24 @@ $(document).ready(function () {
                 },
                 data: formData,
                 success: function (response) {
-                    console.log(response);
+                    if (response.message === 'success') {
+                    // Hide the form
+                    $("#form-rsvp").hide();
+
+                    // Create and show a thank you message
+                    let thankYouMessage = $('<div class="thank-you-message">' +
+                        '<h2>Thank You!</h2>' +
+                        '<p>We have received your RSVP. We appreciate your response and look forward to celebrating with you!</p>' +
+                        '</div>');
+
+                    // Insert the thank you message after the form
+                    $("#form-rsvp").after(thankYouMessage);
+
+                    // Scroll to the thank you message
+                    $('html, body').animate({
+                        scrollTop: thankYouMessage.offset().top - 100
+                    }, 1000);
+                    }
                 },
                 error: function () {
                     console.log("An error occurred while submitting the form.");
