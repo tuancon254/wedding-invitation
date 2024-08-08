@@ -55,7 +55,7 @@ var Neela;
                     /loaded|complete/.test(document.readyState) &&
                         (clearInterval(e), a.resizeVideos());
                 }, 10)),
-                a.contactForm(),
+                // a.contactForm(),
                 a.objEvents(),
                 a.parallaxTimeline(),
                 (t = setInterval(function () {
@@ -619,216 +619,217 @@ var Neela;
                     })
                     .resize();
         },
-        contactForm: function () {
-            var m = this;
-            u(".submit_form").on("click", function (e) {
-                var t,
-                    a,
-                    n,
-                    o = u(this),
-                    i = o.closest("form"),
-                    s = u("input, textarea, select, fieldset", i),
-                    r = 0,
-                    l = /\S+@\S+\.\S+/,
-                    c = "contact",
-                    d = !1;
-                return (
-                    e.preventDefault(),
-                    (n = function (e) {
-                        return encodeURIComponent(e);
-                    }),
-                    o.width("auto"),
-                    u(".form_status_message").html(""),
-                    s.each(function () {
-                        var e = u(this);
-                        "hidden" === e.attr("type")
-                            ? e.hasClass("subject")
-                                ? (c += "&subject=" + n(e.val()))
-                                : e.hasClass("fromName") ||
-                                  e.hasClass("fromname")
-                                ? (c += "&fromname=" + n(e.val()))
-                                : e.hasClass("fromEmail") ||
-                                  e.hasClass("fromemail")
-                                ? (c += "&fromemail=" + n(e.val()))
-                                : (e.hasClass("emailTo") ||
-                                      e.hasClass("emailto")) &&
-                                  (c += "&emailto=" + n(e.val()))
-                            : ("checkbox" === e.attr("type") &&
-                                  1 === e.parents("fieldset").length &&
-                                  e.parents("fieldset").hasClass("required")) ||
-                              (e.is("fieldset") &&
-                              e.hasClass("required") &&
-                              0 ===
-                                  u(
-                                      "#" +
-                                          e.attr("id") +
-                                          " input:checkbox:checked"
-                                  ).length
-                                  ? (u("input", e).addClass("is-invalid"),
-                                    (d = !0))
-                                  : (e.hasClass("required") &&
-                                        "checkbox" === e.attr("type") &&
-                                        !u(
-                                            "input[id='" + e.attr("id") + "']"
-                                        ).is(":checked")) ||
-                                    (e.hasClass("required") &&
-                                        "" === e.val() &&
-                                        "checkbox" !== e.attr("type") &&
-                                        !e.is("fieldset")) ||
-                                    (e.hasClass("required") &&
-                                        "radio" === e.attr("type") &&
-                                        !u(
-                                            "input[name='" +
-                                                e.attr("name") +
-                                                "']"
-                                        ).is(":checked")) ||
-                                    ("email" === e.attr("type") &&
-                                        "" !== e.val() &&
-                                        !1 === l.test(e.val()))
-                                  ? (e.addClass("is-invalid"), (d = !0))
-                                  : "g-recaptcha-response" !== e.attr("id") &&
-                                    "recaptcha-token" !== e.attr("id") &&
-                                    (e.removeClass("is-invalid"),
-                                    u("input", e).removeClass("is-invalid"),
-                                    e.hasClass("subject")
-                                        ? ((c += "&subject=" + n(e.val())),
-                                          (c +=
-                                              "&subject_label=" +
-                                              n(e.attr("name"))))
-                                        : e.hasClass("fromName") ||
-                                          e.hasClass("fromname")
-                                        ? ((c += "&fromname=" + n(e.val())),
-                                          (c +=
-                                              "&fromname_label=" +
-                                              n(e.attr("name"))))
-                                        : e.hasClass("fromEmail") ||
-                                          e.hasClass("fromemail")
-                                        ? ((c += "&fromemail=" + n(e.val())),
-                                          (c +=
-                                              "&fromemail_label=" +
-                                              n(e.attr("name"))))
-                                        : ("radio" === e.attr("type")
-                                              ? u(
-                                                    "input[id='" +
-                                                        e.attr("id") +
-                                                        "']"
-                                                ).is(":checked") &&
-                                                ((c +=
-                                                    "&field" +
-                                                    r +
-                                                    "_label=" +
-                                                    n(e.attr("name"))),
-                                                (c +=
-                                                    "&field" +
-                                                    r +
-                                                    "_value=" +
-                                                    n(
-                                                        u.trim(
-                                                            u(
-                                                                "label[for='" +
-                                                                    e.attr(
-                                                                        "id"
-                                                                    ) +
-                                                                    "']"
-                                                            ).text()
-                                                        )
-                                                    )))
-                                              : e.is("fieldset")
-                                              ? ((c +=
-                                                    "&field" +
-                                                    r +
-                                                    "_label=" +
-                                                    n(e.attr("name"))),
-                                                u(
-                                                    "#" +
-                                                        e.attr("id") +
-                                                        " input:checkbox:checked"
-                                                ).each(function (e) {
-                                                    0 === e
-                                                        ? ((c +=
-                                                              "&field" +
-                                                              r +
-                                                              "_value="),
-                                                          (c += n(
-                                                              u.trim(
-                                                                  u(
-                                                                      "label[for='" +
-                                                                          u(
-                                                                              this
-                                                                          ).attr(
-                                                                              "id"
-                                                                          ) +
-                                                                          "']"
-                                                                  ).text()
-                                                              )
-                                                          )))
-                                                        : (c +=
-                                                              ", " +
-                                                              n(
-                                                                  u.trim(
-                                                                      u(
-                                                                          "label[for='" +
-                                                                              u(
-                                                                                  this
-                                                                              ).attr(
-                                                                                  "id"
-                                                                              ) +
-                                                                              "']"
-                                                                      ).text()
-                                                                  )
-                                                              ));
-                                                }))
-                                              : ((c +=
-                                                    "&field" +
-                                                    r +
-                                                    "_label=" +
-                                                    n(e.attr("name"))),
-                                                (c +=
-                                                    "&field" +
-                                                    r +
-                                                    "_value=" +
-                                                    n(e.val()))),
-                                          (r += 1))));
-                    }),
-                    (c += "&len=" + r),
-                    (a = function () {
-                        u(".fa-spinner", o).remove(), o.removeClass("disabled");
-                    }),
-                    d || m.sendingMail
-                        ? m.showError()
-                        : ((m.sendingMail = !0),
-                          o.append(
-                              '<i class="fas fa-spinner fa-spin after"></i>'
-                          ),
-                          o.addClass("disabled"),
-                          u.ajax({
-                              type: "POST",
-                              url: '/rsvp',
-                              data: {
-                                "_token": $('#token').val(),
-                                "data": c
-                              },
-                              success: function (e) {
-                                console.log(e);
+        // contactForm: function () {
+        //     var m = this;
+        //     u(".submit_form").on("click", function (e) {
+        //         var t,
+        //             a,
+        //             n,
+        //             o = u(this),
+        //             i = o.closest("form"),
+        //             s = u("input, textarea, select, fieldset", i),
+        //             r = 0,
+        //             l = /\S+@\S+\.\S+/,
+        //             c = "contact",
+        //             d = !1;
+        //         return (
+        //             e.preventDefault(),
+        //             (n = function (e) {
+        //                 return encodeURIComponent(e);
+        //             }),
+        //             o.width("auto"),
+        //             u(".form_status_message").html(""),
+        //             s.each(function () {
+        //                 var e = u(this);
+        //                 "hidden" === e.attr("type")
+        //                     ? e.hasClass("subject")
+        //                         ? (c += "&subject=" + n(e.val()))
+        //                         : e.hasClass("fromName") ||
+        //                           e.hasClass("fromname")
+        //                         ? (c += "&fromname=" + n(e.val()))
+        //                         : e.hasClass("fromEmail") ||
+        //                           e.hasClass("fromemail")
+        //                         ? (c += "&fromemail=" + n(e.val()))
+        //                         : (e.hasClass("emailTo") ||
+        //                               e.hasClass("emailto")) &&
+        //                           (c += "&emailto=" + n(e.val()))
+        //                     : ("checkbox" === e.attr("type") &&
+        //                           1 === e.parents("fieldset").length &&
+        //                           e.parents("fieldset").hasClass("required")) ||
+        //                       (e.is("fieldset") &&
+        //                       e.hasClass("required") &&
+        //                       0 ===
+        //                           u(
+        //                               "#" +
+        //                                   e.attr("id") +
+        //                                   " input:checkbox:checked"
+        //                           ).length
+        //                           ? (u("input", e).addClass("is-invalid"),
+        //                             (d = !0))
+        //                           : (e.hasClass("required") &&
+        //                                 "checkbox" === e.attr("type") &&
+        //                                 !u(
+        //                                     "input[id='" + e.attr("id") + "']"
+        //                                 ).is(":checked")) ||
+        //                             (e.hasClass("required") &&
+        //                                 "" === e.val() &&
+        //                                 "checkbox" !== e.attr("type") &&
+        //                                 !e.is("fieldset")) ||
+        //                             (e.hasClass("required") &&
+        //                                 "radio" === e.attr("type") &&
+        //                                 !u(
+        //                                     "input[name='" +
+        //                                         e.attr("name") +
+        //                                         "']"
+        //                                 ).is(":checked")) ||
+        //                             ("email" === e.attr("type") &&
+        //                                 "" !== e.val() &&
+        //                                 !1 === l.test(e.val()))
+        //                           ? (e.addClass("is-invalid"), (d = !0))
+        //                           : "g-recaptcha-response" !== e.attr("id") &&
+        //                             "recaptcha-token" !== e.attr("id") &&
+        //                             (e.removeClass("is-invalid"),
+        //                             u("input", e).removeClass("is-invalid"),
+        //                             e.hasClass("subject")
+        //                                 ? ((c += "&subject=" + n(e.val())),
+        //                                   (c +=
+        //                                       "&subject_label=" +
+        //                                       n(e.attr("name"))))
+        //                                 : e.hasClass("fromName") ||
+        //                                   e.hasClass("fromname")
+        //                                 ? ((c += "&fromname=" + n(e.val())),
+        //                                   (c +=
+        //                                       "&fromname_label=" +
+        //                                       n(e.attr("name"))))
+        //                                 : e.hasClass("fromEmail") ||
+        //                                   e.hasClass("fromemail")
+        //                                 ? ((c += "&fromemail=" + n(e.val())),
+        //                                   (c +=
+        //                                       "&fromemail_label=" +
+        //                                       n(e.attr("name"))))
+        //                                 : ("radio" === e.attr("type")
+        //                                       ? u(
+        //                                             "input[id='" +
+        //                                                 e.attr("id") +
+        //                                                 "']"
+        //                                         ).is(":checked") &&
+        //                                         ((c +=
+        //                                             "&field" +
+        //                                             r +
+        //                                             "_label=" +
+        //                                             n(e.attr("name"))),
+        //                                         (c +=
+        //                                             "&field" +
+        //                                             r +
+        //                                             "_value=" +
+        //                                             n(
+        //                                                 u.trim(
+        //                                                     u(
+        //                                                         "label[for='" +
+        //                                                             e.attr(
+        //                                                                 "id"
+        //                                                             ) +
+        //                                                             "']"
+        //                                                     ).text()
+        //                                                 )
+        //                                             )))
+        //                                       : e.is("fieldset")
+        //                                       ? ((c +=
+        //                                             "&field" +
+        //                                             r +
+        //                                             "_label=" +
+        //                                             n(e.attr("name"))),
+        //                                         u(
+        //                                             "#" +
+        //                                                 e.attr("id") +
+        //                                                 " input:checkbox:checked"
+        //                                         ).each(function (e) {
+        //                                             0 === e
+        //                                                 ? ((c +=
+        //                                                       "&field" +
+        //                                                       r +
+        //                                                       "_value="),
+        //                                                   (c += n(
+        //                                                       u.trim(
+        //                                                           u(
+        //                                                               "label[for='" +
+        //                                                                   u(
+        //                                                                       this
+        //                                                                   ).attr(
+        //                                                                       "id"
+        //                                                                   ) +
+        //                                                                   "']"
+        //                                                           ).text()
+        //                                                       )
+        //                                                   )))
+        //                                                 : (c +=
+        //                                                       ", " +
+        //                                                       n(
+        //                                                           u.trim(
+        //                                                               u(
+        //                                                                   "label[for='" +
+        //                                                                       u(
+        //                                                                           this
+        //                                                                       ).attr(
+        //                                                                           "id"
+        //                                                                       ) +
+        //                                                                       "']"
+        //                                                               ).text()
+        //                                                           )
+        //                                                       ));
+        //                                         }))
+        //                                       : ((c +=
+        //                                             "&field" +
+        //                                             r +
+        //                                             "_label=" +
+        //                                             n(e.attr("name"))),
+        //                                         (c +=
+        //                                             "&field" +
+        //                                             r +
+        //                                             "_value=" +
+        //                                             n(e.val()))),
+        //                                   (r += 1))));
+        //             }),
+        //             (c += "&len=" + r),
+        //             (a = function () {
+        //                 u(".fa-spinner", o).remove(), o.removeClass("disabled");
+        //             }),
+        //             d  ? 0
+        //                 : ((m.sendingMail = !0),
+        //                   o.append(
+        //                       '<i class="fas fa-spinner fa-spin after"></i>'
+        //                   ),
+        //             o.addClass("disabled"),
+        //             u.ajax({
+        //                 type: "POST",
+        //                 url: "/rsvp",
+        //                 headers:{
+        //                     "X-CSRF-TOKEN" : $("#token").val()
+        //                 },
+        //                 data: $('#form-rsvp').serialize(),
+        //                 success: function (e) {
+        //                     console.log(e);
 
-                                //   a(),
-                                //       "ok" === e
-                                //           ? (t(), i[0].reset())
-                                //           : m.showError(
-                                //                 m.contactFormRecaptchaErrorMsg
-                                //             ),
-                                //       (m.sendingMail = !1),
-                                //       u(".g-recaptcha").length &&
-                                //           grecaptcha.reset();
-                              },
-                              error: function () {
-                                  a(), m.showError(), (m.sendingMail = !1);
-                              },
-                          })),
-                    !1
-                );
-            });
-        },
+        //                     //   a(),
+        //                     //       "ok" === e
+        //                     //           ? (t(), i[0].reset())
+        //                     //           : m.showError(
+        //                     //                 m.contactFormRecaptchaErrorMsg
+        //                     //             ),
+        //                     //       (m.sendingMail = !1),
+        //                     //       u(".g-recaptcha").length &&
+        //                     //           grecaptcha.reset();
+        //                 },
+        //                 error: function () {
+        //                     a(),
+        //                     // m.showError(),
+        //                     (m.sendingMail = !1);
+        //                 },
+        //             })),
+        //             !1
+        //         );
+        //     });
+        // },
         showError: function (e = "") {
             "" === e && (e = this.contactFormErrorMsg),
                 u(".form_status_message").html(

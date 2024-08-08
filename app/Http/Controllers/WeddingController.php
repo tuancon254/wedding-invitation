@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\CustomerResponse;
 use Illuminate\Http\Request;
 
 class WeddingController extends Controller
@@ -22,7 +23,10 @@ class WeddingController extends Controller
 
     public function rsvp(Request $request)
     {
-        dd($request->all());
+        $customerResponse = new CustomerResponse();
+        $customerResponse->fill($request->only(['will_come', 'name', 'email', 'number_of_guest', 'guestOf', 'message']));
+        $customerResponse->save();
+
         return response()->json([
             'message' => 'success'
         ]);
