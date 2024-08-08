@@ -37,7 +37,7 @@
                 </div>
 
                 <div class="center">
-                    <a href="#rsvp" class="btn btn-primary scrollto">RSVP</a>
+                    <a href="#rsvp-2" class="btn btn-primary">RSVP</a>
                 </div>
             </div>
         </div>

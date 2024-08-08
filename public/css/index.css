@@ -94,4 +94,15 @@
 
 .overflow-image{
     background-position: unset !important;
+    width: 40%;
+}
+
+@media (max-width: 767px) {
+    .overflow-image {
+        width: 100%;
+    }
+}
+
+.footer-logo{
+    font-family: "Great Vibes";
 }

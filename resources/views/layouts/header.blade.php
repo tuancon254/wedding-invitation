@@ -29,21 +29,12 @@
                                     <li><a href="#testimonials">Testimonials</a></li>
                                     <li><a href="#groomsmen">Groomsmen</a></li>
                                     <li><a href="#giftregistry">Gift Registry</a></li>
-                                    <li class="dropdown-submenu">
-                                        <a href="#">Another Menu</a>
-                                        <ul class="dropdown-menu">
-                                            <li><a href="#">Another Menu</a></li>
-                                            <li><a href="#">Another Menu</a></li>
-                                        </ul>
-                                    </li>
                                 </ul>
                             </li>
 
                             <li><a href="#gallery">Gallery</a></li>
 
-                            <li><a href="#blog">Blog</a></li>
-
-                            <li><a href="#rsvp">RSVP</a></li>
+                            <li><a href="#rsvp-2">RSVP</a></li>
                         </ul>
 
                         <button id="nav-mobile-btn"><i class="fas fa-bars"></i></button><!-- Mobile menu button -->

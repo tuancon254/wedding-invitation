@@ -39,9 +39,14 @@
 
                         <div class="overflow-image-text extra-padding-top">
                             <h2 class="title">Join Us for Our Special Day!</h2>
-                            <p class="center">We are thrilled to invite you to the wedding celebration of Minh Tuấn and Minh Lan! It's a moment we've been dreaming of, and we can't wait to share it with you. Our love story is one of laughter, adventure, and a deep connection that only grows stronger with each passing day.</p>
-                            <p class="center">On September 8th, 2024, we will embark on a new chapter in our lives, surrounded by the people we love and cherish. The ceremony will take place at [location], followed by a reception filled with joy, music, and delicious food.</p>
-                            <p class="center">We would be honored if you could join us to celebrate this special occasion. Your presence means the world to us, and we look forward to sharing this unforgettable day with you.</p>
+                            <p class="center">We are thrilled to invite you to the wedding celebration of Minh Tuấn and Minh
+                                Lan! It's a moment we've been dreaming of, and we can't wait to share it with you.</p>
+                            <p class="center">On September 8th, 2024, we will embark on a new chapter in our lives,
+                                surrounded by the people we love and cherish. The ceremony will take place at below
+                                location, followed by a reception filled with joy, music, and delicious food.</p>
+                            <p class="center">We would be honored if you could join us to celebrate this special occasion.
+                                Your presence means the world to us, and we look forward to sharing this unforgettable day
+                                with you.</p>
                             <p class="center"><a class="btn btn-primary" href="#the-wedding">Invitation</a>
                             </p>
                         </div>
@@ -74,7 +79,7 @@
                     <div class="form-wrapper flowers neela-style">
                         <h2 class="section-title">Will you Attend?</h2>
                         <input type="hidden" name="_token" id="token" value="{{ csrf_token() }}">
-                        <form id="form-rsvp" method="post" action="{{ route('rsvp')}}">
+                        <form id="form-rsvp" method="post" action="{{ route('rsvp') }}">
                             <div class="form-floating">
                                 <input type="text" name="name" id="name" placeholder="Your Name*"
                                     class="form-control required">
@@ -88,8 +93,7 @@
                             </div>
 
                             <div class="form-floating">
-                                <select class="form-select required" aria-label="guestOf" name="guestOf"
-                                    id="guestOf">
+                                <select class="form-select required" aria-label="guestOf" name="guestOf" id="guestOf">
                                     <option value=""></option>
                                     <option value="Groom">Groom</option>
                                     <option value="Bride">Bride</option>
@@ -113,7 +117,8 @@
                             </div>
 
                             <div class="form-floating">
-                                <input type="number" name="number_of_guest" id="number_of_guest" placeholder="Number of guests" min="0" max="10" value="1"
+                                <input type="number" name="number_of_guest" id="number_of_guest"
+                                    placeholder="Number of guests" min="0" max="10" value="1"
                                     class="form-control required numberOfGuest">
                                 <label for="number_of_guest">Number of guests</label>
                             </div>
