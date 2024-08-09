@@ -39,16 +39,22 @@
 
                         <div class="overflow-image-text extra-padding-top">
                             <h2 class="title">Join Us for Our Special Day!</h2>
-                            <p class="center">We are thrilled to invite you to the wedding celebration of Minh Tuấn and Minh
-                                Lan! It's a moment we've been dreaming of, and we can't wait to share it with you.</p>
+                            <p class="center" style="text-align: justify">"We are overjoyed to invite you to celebrate one of the most special days of our lives—our wedding!
+                            </p>
+                            <p class="center" style="text-align: justify">Would mean the world to us if you could join us on this momentous occasion. Your presence will make our celebration even more memorable, and we look forward to sharing this unforgettable day with you.
+                                Please let us know if you can attend by 1st August, so we can prepare for a wonderful day together."
+                            </p>
+                            <p class="center">With love and anticipation</p>
+                            <p class="center mt-5"><img src="{{ asset('images/signature-2.png') }}" alt="Andrew and Isabella" style="max-width: 80%"></p>
+
+                            {{-- <p class="center">We are thrilled to invite you to the our wedding celebration! It's a moment we've been dreaming of, and we can't wait to share it with you.</p>
                             <p class="center">On September 8th, 2024, we will embark on a new chapter in our lives,
                                 surrounded by the people we love and cherish. The ceremony will take place at below
                                 location, followed by a reception filled with joy, music, and delicious food.</p>
                             <p class="center">We would be honored if you could join us to celebrate this special occasion.
                                 Your presence means the world to us, and we look forward to sharing this unforgettable day
-                                with you.</p>
-                            <p class="center"><a class="btn btn-primary" href="#the-wedding">Invitation</a>
-                            </p>
+                                with you.</p> --}}
+                            {{-- <p class="center"><a class="btn btn-primary" href="#the-wedding">Invitation</a></p> --}}
                         </div>
 
                         <div class="overflow-image flower">

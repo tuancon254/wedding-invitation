@@ -19,11 +19,10 @@
                     </div>
 
                     <div class="invite_info">
-                        <h2 class="d-flex justify-content-between align-items-end"
-                            style="font-size: 40px; font-family: Great Vibes">
-                            <div>Minh Tuan</div>
+                        <h2 class="invite_name">
+                            <div class="groom">Minh Tuấn</div>
                             <small>&</small>
-                            <div>Minh Lan</div>
+                            <div class="bride">Minh Lan</div>
                         </h2>
 
                         <div class="uppercase">Request the honor of your presence on their wedding day</div>
