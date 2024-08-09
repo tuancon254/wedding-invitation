@@ -118,3 +118,15 @@
 #map:focus{
     outline: none;
 }
+
+.section-divider-bottom-1::after{
+    border-color: transparent transparent #f9f9f9 transparent;
+}
+
+.section-divider-top-1::before{
+    border-color: #f9f9f9 transparent transparent transparent;
+}
+
+#location, .page-content{
+    background-color: #f9f9f9;
+}

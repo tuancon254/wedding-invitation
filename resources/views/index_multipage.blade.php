@@ -71,15 +71,16 @@
 
 
     <!-- BEGIN CONTACTS SECTION -->
-    <section id="rsvp-2" class="section-bg-color extra-padding-section">
+    <section id="rsvp" class="section-bg-color extra-padding-section">
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 offset-lg-1 col-xl-8 offset-xl-2  col-xxl-6 offset-xxl-3">
 
                     <div class="form-wrapper flowers neela-style">
-                        <h2 class="section-title">Will you Attend?</h2>
-                        <input type="hidden" name="_token" id="token" value="{{ csrf_token() }}">
-                        <form id="form-rsvp" method="post" action="{{ route('rsvp') }}">
+                        <form id="form-rsvp" method="post" action="{{ route('rsvp.store') }}">
+
+                            <h2 class="section-title">Will you Attend?</h2>
+                            <input type="hidden" name="_token" id="token" value="{{ csrf_token() }}">
                             <div class="form-floating">
                                 <input type="text" name="name" id="name" placeholder="Your Name*"
                                     class="form-control required">

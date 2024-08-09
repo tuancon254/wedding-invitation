@@ -15,16 +15,16 @@ var templateSettings = {
 
 		$tis.initialized = true;
 
-        $('body').append('<div id="template-settings" class="form-style">'+
-                            '<i class="fas fa-cog"></i><h4 class="center">Live Preview Settings</h4><br>'+
-                            '<h4>Color:</h4><input class="minicolors" type="text" name="color-picker" value="86b2b1" />'+
-                            '<h4>Navigation Style:</h4>'+
-                            '<select class="form-select" aria-label="Navigation Style" name="navigationStyle" id="navigation_style"><option value="style1">Style 1</option><option value="style2">Style 2</option></select>'+
-                            '<h4>RTL:</h4><div class="form-check">'+
-                                '<input class="form-check-input" type="checkbox" value="rtl" name="settings-rtl" id="settings-rtl"><label for="settings-rtl">Enable/Disable RTL version.</label></div>');
+        // $('body').append('<div id="template-settings" class="form-style">'+
+        //                     '<i class="fas fa-cog"></i><h4 class="center">Live Preview Settings</h4><br>'+
+        //                     '<h4>Color:</h4><input class="minicolors" type="text" name="color-picker" value="86b2b1" />'+
+        //                     '<h4>Navigation Style:</h4>'+
+        //                     '<select class="form-select" aria-label="Navigation Style" name="navigationStyle" id="navigation_style"><option value="style1">Style 1</option><option value="style2">Style 2</option></select>'+
+        //                     '<h4>RTL:</h4><div class="form-check">'+
+        //                         '<input class="form-check-input" type="checkbox" value="rtl" name="settings-rtl" id="settings-rtl"><label for="settings-rtl">Enable/Disable RTL version.</label></div>');
 
-        $tis.construct();
-		$tis.events();
+        // $tis.construct();
+		// $tis.events();
 	},
 
 	construct: function() {

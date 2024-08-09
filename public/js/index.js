@@ -55,6 +55,11 @@ $(document).ready(function () {
     });
 
 
+    $(".submit_form").click(function () {
+        $(".submit_form").prop('disabled', true);
+        $("#form-rsvp").submit();
+    });
+
     $("#form-rsvp").on("submit", function (event) {
         event.preventDefault();
         let error = false;
@@ -90,28 +95,28 @@ $(document).ready(function () {
                 data: formData,
                 success: function (response) {
                     if (response.message === 'success') {
-                    // Hide the form
-                    $("#form-rsvp").hide();
+                        // Hide the form
+                        $("#form-rsvp").hide();
 
-                    // Create and show a thank you message
-                    let thankYouMessage = $('<div class="thank-you-message">' +
-                        '<h2>Thank You!</h2>' +
-                        '<p>We have received your RSVP. We appreciate your response and look forward to celebrating with you!</p>' +
-                        '</div>');
+                        // Create and show a thank you message
+                        let thankYouMessage = $('<div class="thank-you-message text-center">' +
+                            '<h2 class="pb-4">Thank You!</h2>' +
+                            '<p>We have received your RSVP. We appreciate your response and look forward to celebrating with you!</p>' +
+                            '</div>');
 
-                    // Insert the thank you message after the form
-                    $("#form-rsvp").after(thankYouMessage);
+                        // Insert the thank you message after the form
+                        $("#form-rsvp").after(thankYouMessage);
 
-                    // Scroll to the thank you message
-                    $('html, body').animate({
-                        scrollTop: thankYouMessage.offset().top - 100
-                    }, 1000);
+                        // Scroll to the thank you message
+                        $('html, body').animate({
+                            scrollTop: thankYouMessage.offset().top - 100
+                        }, 1000);
                     }
                 },
                 error: function () {
-                    console.log("An error occurred while submitting the form.");
+                    $(".submit_form").prop('disabled', false);
                 },
             });
-        }
+        } else $(".submit_form").prop('disabled', false);
     });
 });
