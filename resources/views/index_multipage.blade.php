@@ -84,7 +84,6 @@
 
                     <div class="form-wrapper flowers neela-style">
                         <form id="form-rsvp" method="post" action="{{ route('rsvp.store') }}">
-
                             <h2 class="section-title">Will you Attend?</h2>
                             <input type="hidden" name="_token" id="token" value="{{ csrf_token() }}">
                             <div class="form-floating">

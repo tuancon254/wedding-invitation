@@ -61,6 +61,7 @@ $(document).ready(function () {
     $("#form-rsvp").on("submit", function (event) {
         event.preventDefault();
         let error = false;
+        let url = $(this).attr("action");
         $(this)
             .find(".required")
             .each(function () {
@@ -86,7 +87,7 @@ $(document).ready(function () {
             formData += "&will_come=" + attendWedding;
             $.ajax({
                 type: "POST",
-                url: "/rsvp",
+                url: url,
                 headers: {
                     "X-CSRF-TOKEN": $("#token").val(),
                 },
