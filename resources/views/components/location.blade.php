@@ -36,7 +36,7 @@
                         <div id="map" class="gmap" style="width: 100%; height: 550px; z-index:0;"></div>
                     </div>
                 </div>
-{{-- 
+{{--
                 <div class="center">
                     <a href="#rsvp-2" class="btn btn-primary">RSVP</a>
                 </div> --}}

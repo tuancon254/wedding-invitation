@@ -1,9 +1,9 @@
 $(document).ready(function () {
     var map = L.map("map", {
-        center: [20.98585302485291, 105.86256283729534],
+        center: [20.983985117147387, 105.86479467422564],
         zoom: 17,
         zoomControl: false,
-        gestureHandling: true
+        gestureHandling: true,
     });
 
     L.control
@@ -25,18 +25,27 @@ $(document).ready(function () {
 
     L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png").addTo(map);
 
-    L.marker([20.9841181, 105.8647972], { icon: weddingIcon }).addTo(map).on('click', openMapLocation);
-    L.marker([20.98731236240082, 105.86090797975427], { icon: homeIcon }).addTo(map).on('click', openMapLocation);
+    L.marker([20.983985117147387, 105.86479467422564], { icon: weddingIcon })
+        .addTo(map)
+        .on("click", openMapLocation);
+    L.marker([20.98731236240082, 105.86090797975427], { icon: homeIcon })
+        .addTo(map)
+        .on("click", openMapLocation);
 
-    function openMapLocation(){
+    function openMapLocation() {
         var lat = this.getLatLng().lat;
         var lng = this.getLatLng().lng;
         var googleMapsUrl = "https://www.google.com/maps?q=" + lat + "," + lng;
 
-        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-            window.location.href = "geo:" + lat + "," + lng + "?q=" + lat + "," + lng;
+        if (
+            /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+                navigator.userAgent
+            )
+        ) {
+            window.location.href =
+                "geo:" + lat + "," + lng + "?q=" + lat + "," + lng;
         } else {
-            window.open(googleMapsUrl, '_blank');
+            window.open(googleMapsUrl, "_blank");
         }
     }
 
@@ -49,12 +58,11 @@ $(document).ready(function () {
             duration: 1.5, // duration of the flight in seconds
         });
 
-        $('#map').focus()
+        $("#map").focus();
     });
 
-
     $(".submit_form").click(function () {
-        $(".submit_form").prop('disabled', true);
+        $(".submit_form").prop("disabled", true);
         $("#form-rsvp").submit();
     });
 
@@ -93,29 +101,40 @@ $(document).ready(function () {
                 },
                 data: formData,
                 success: function (response) {
-                    if (response.message === 'success') {
+                    if (response.message === "success") {
                         // Hide the form
                         $("#form-rsvp").hide();
 
                         // Create and show a thank you message
-                        let thankYouMessage = $('<div class="thank-you-message text-center">' +
-                            '<h2 class="pb-4">Thank You!</h2>' +
-                            '<p>We have received your RSVP. We appreciate your response and look forward to celebrating with you!</p>' +
-                            '</div>');
+                        let thankYouMessage = $(
+                            '<div class="thank-you-message text-center">' +
+                                '<h2 class="pb-4">Thank You!</h2>' +
+                                "<p>We have received your RSVP. We appreciate your response and look forward to celebrating with you!</p>" +
+                                "</div>"
+                        );
 
                         // Insert the thank you message after the form
                         $("#form-rsvp").after(thankYouMessage);
 
                         // Scroll to the thank you message
-                        $('html, body').animate({
-                            scrollTop: thankYouMessage.offset().top - 100
-                        }, 1000);
+                        $("html, body").animate(
+                            {
+                                scrollTop: thankYouMessage.offset().top - 100,
+                            },
+                            1000
+                        );
                     }
                 },
                 error: function () {
-                    $(".submit_form").prop('disabled', false);
+                    $(".submit_form").prop("disabled", false);
                 },
             });
-        } else $(".submit_form").prop('disabled', false);
+        } else $(".submit_form").prop("disabled", false);
+    });
+
+    $(".guest-button").on("click", function () {
+        var guestOf = $(this).data("guest");
+        $("#GuestOf").fadeOut(1e3);
+        // You might want to show the next screen or form here
     });
 });
