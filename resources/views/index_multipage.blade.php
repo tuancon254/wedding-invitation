@@ -2,6 +2,7 @@
 
 @section('content')
     <!-- BEGIN HERO SECTION -->
+    @include('components.guest-of')
     <div id="hero" class="bg-slideshow section-divider-bottom-1 section-divider-bg-color">
         <div class="container">
             <div class="row">
@@ -147,7 +148,8 @@
                             <div class="qr-code-banking">
                                 <h4 class="text-center">Send wishes via QR code</h4>
                                 <p class="text-center">Scan the QR code to send your heartfelt wishes to the happy couple.</p>
-                                <img src="{{ asset('images/qr_code.jpg') }}" alt="QR Code for Sending Wishes" class="mx-auto" style="border-radius: 10px">
+                                <img src="{{ asset('images/qr_code_groom.jpg') }}" alt="QR Code for Sending Wishes" class="mx-auto groom" style="border-radius: 10px; display: none">
+                                <img src="{{ asset('images/qr_code_bride.jpg') }}" alt="QR Code for Sending Wishes" class="mx-auto bride" style="border-radius: 10px; display: none">
                             </div>
                         </form>
                     </div>
@@ -156,4 +158,9 @@
         </div>
     </section>
     <!-- END CONTACTS SECTION -->
+@endsection
+
+@section('js')
+<script src="{{ asset('js/index.js') }}"></script>
+
 @endsection

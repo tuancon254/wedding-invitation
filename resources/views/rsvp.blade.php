@@ -129,3 +129,8 @@
     </div>
     <!-- END PAGE CONTENT -->
 @endsection
+
+@section('js')
+<script src="{{ asset('js/index.js') }}"></script>
+
+@endsection

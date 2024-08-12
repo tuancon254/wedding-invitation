@@ -83,8 +83,8 @@
     <script src="{{ asset('js/variables.js') }}"></script>
     <script src="{{ asset('js/scripts.js') }}"></script>
     <script src="{{ asset('js/template.settings.js') }}"></script>
-    <script src="{{ asset('js/index.js') }}"></script>
     <script src="{{ asset('js/jquery.minicolors.min.js') }}"></script>
+    @yield('js')
 </body>
 
 </html>
