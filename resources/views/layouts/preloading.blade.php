@@ -15,7 +15,7 @@
 
 <div id="GuestOf">
     <div class="guest-of-screen">
-        <h2>Who are you a guest of?</h2>
+        <h2>Whose Guest Are You?</h2>
         <div class="guest-selection">
             <button class="guest-button" data-guest="groom">
                 <img src="{{ asset('images/groomIcon.png') }}" alt="Groom Icon" width="50" height="50">

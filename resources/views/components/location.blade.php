@@ -1,4 +1,3 @@
-
 <section id="location">
     <div class="container">
         <div class="row">
@@ -24,10 +23,21 @@
 
                                 <div class="info-map-divider"></div>
 
-                                <h4>Home
-                                </h4>
-                                <p>8/299 Hoang Mai Street, Hoang Mai, Hanoi<br>20.9873349, 105.8610204</p>
-                                <h5 class="mt-1 see-in-map" data-location="20.98731236240082, 105.86090797975427">See in map ></h5>
+                                <div class="groom" style="display: none">
+                                    <h4>Home
+                                    </h4>
+                                    <p>8/299 Hoang Mai Street, Hoang Mai, Hanoi<br>20.9873349, 105.8610204</p>
+                                    <h5 class="mt-1 see-in-map" data-location="20.98731236240082, 105.86090797975427">
+                                        See in map ></h5>
+                                </div>
+
+                                <div class="bride" style="display: none">
+                                    <h4>Home
+                                    </h4>
+                                    <p>29/374 Nguyen Huu Cau Street, Hai Duong City<br>20.94346671, 106.34926567</p>
+                                    <h5 class="mt-1 see-in-map" data-location="20.94346671343266, 106.34926567262029">
+                                        See in map ></h5>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -36,7 +46,7 @@
                         <div id="map" class="gmap" style="width: 100%; height: 550px; z-index:0;"></div>
                     </div>
                 </div>
-{{--
+                {{--
                 <div class="center">
                     <a href="#rsvp-2" class="btn btn-primary">RSVP</a>
                 </div> --}}

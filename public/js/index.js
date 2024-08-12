@@ -1,4 +1,5 @@
 $(document).ready(function () {
+
     var map = L.map("map", {
         center: [20.983985117147387, 105.86479467422564],
         zoom: 17,
@@ -29,6 +30,9 @@ $(document).ready(function () {
         .addTo(map)
         .on("click", openMapLocation);
     L.marker([20.98731236240082, 105.86090797975427], { icon: homeIcon })
+        .addTo(map)
+        .on("click", openMapLocation);
+    L.marker([20.94346671343266, 106.34926567262029], { icon: homeIcon })
         .addTo(map)
         .on("click", openMapLocation);
 
@@ -134,7 +138,9 @@ $(document).ready(function () {
 
     $(".guest-button").on("click", function () {
         var guestOf = $(this).data("guest");
+        $(`.${guestOf}`).show()
         $("#GuestOf").fadeOut(1e3);
+        $(document).scrollTop(0)
         // You might want to show the next screen or form here
     });
 });

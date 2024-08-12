@@ -19,8 +19,15 @@
 
                 <div class="col-md-4">
                     <div class="footer-info right">
-                        Tel.: +84 966 785 693<br>
-                        E-mail: tuanlan020920@gmail.com
+                        <div>
+                            <p style="margin-bottom: 10px">Tel.: +84 966 785 693<br>
+                                E-mail: tuanlan020920@gmail.com</p>
+                            <ul class="sn-icons" style="margin-bottom: 0">
+                                <li><a href="https://www.instagram.com/nauthnim_/"><i class="fab fa-instagram-square"></i></a></li>
+                                <li><a href="tel:+84966785693"><i class="fas fa-phone-square"></i></a></li>
+                                <li><a href="https://www.facebook.com/nauthnim9111"><i class="fab fa-facebook-square"></i></a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>

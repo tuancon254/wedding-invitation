@@ -131,13 +131,23 @@
 
                             <div class="form-floating">
                                 <textarea id="message" name="message" placeholder="Message" class="form-control" rows="4"></textarea>
-                                <label for="message">Wishes to the bride and groom</label>
+                                <label for="message">Wishes to the happy couple</label>
                             </div>
 
                             <div class="form_status_message"></div>
 
                             <div class="center">
                                 <button type="submit" class="btn btn-primary submit_form">Send</button>
+                            </div>
+
+                            <div class="or-section">
+                                <hr class="my-4">
+                                <p class="text-center">OR</p>
+                            </div>
+                            <div class="qr-code-banking">
+                                <h4 class="text-center">Send wishes via QR code</h4>
+                                <p class="text-center">Scan the QR code to send your heartfelt wishes to the happy couple.</p>
+                                <img src="{{ asset('images/qr_code.jpg') }}" alt="QR Code for Sending Wishes" class="mx-auto" style="border-radius: 10px">
                             </div>
                         </form>
                     </div>

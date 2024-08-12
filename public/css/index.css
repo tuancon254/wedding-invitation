@@ -205,17 +205,24 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    border: 2px solid #007bff;
+    border: 2px solid #8eaeba;
     border-radius: 10px;
     background-color: white;
     cursor: pointer;
     transition: all 0.3s ease;
     min-width: 110px;
+    color: #8eaeba;
 }
 
 .guest-button:hover {
-    background-color: #007bff;
+    background-color: #8eaeba;
     color: white;
+}
+
+.guest-button:focus {
+    background-color: #8eaeba;
+    color: white;
+    outline: #8eaeba;
 }
 
 .guest-button:hover svg {
