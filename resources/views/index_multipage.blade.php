@@ -161,6 +161,6 @@
 @endsection
 
 @section('js')
-<script src="{{ asset('js/index.js') }}"></script>
+<script src="{{ asset('js/index.js') }}" asp-append-version="true"></script>
 
 @endsection

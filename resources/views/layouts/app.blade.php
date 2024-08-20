@@ -80,9 +80,9 @@
     <script src="{{ asset('js/jquery.zoomslider.js') }}"></script>
 
     <!-- Template Scripts -->
-    <script src="{{ asset('js/variables.js') }}"></script>
-    <script src="{{ asset('js/scripts.js') }}"></script>
-    <script src="{{ asset('js/template.settings.js') }}"></script>
+    <script src="{{ asset('js/variables.js') }}" asp-append-version="true"></script>
+    <script src="{{ asset('js/scripts.js') }}" asp-append-version="true"></script>
+    <script src="{{ asset('js/template.settings.js') }}" asp-append-version="true"></script>
     <script src="{{ asset('js/jquery.minicolors.min.js') }}"></script>
     @yield('js')
 </body>
