@@ -21,8 +21,8 @@ var slidehow_images = [
     // "images/hero-img8.jpg",
     // "images/hero-img9.jpg",
     "images/hero-img10.jpg",
-    "images/hero-img11.jpg",
-    "images/hero-img12.jpg"
+    "images/hero-img14.jpg",
+    "images/hero-img15.jpg"
 ];
 
 //TIMELINE PARALLAX

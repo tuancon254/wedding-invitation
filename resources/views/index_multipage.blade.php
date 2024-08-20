@@ -59,7 +59,7 @@
                         </div>
 
                         <div class="overflow-image flower">
-                            <img src="{{ asset('images/bride_groom4.jpg') }}" alt="Couple Photo">
+                            <img src="{{ asset('images/bride_groom_2.jpg') }}" alt="Couple Photo">
                         </div>
                     </div>
                 </div>

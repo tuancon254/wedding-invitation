@@ -103,7 +103,7 @@
 }
 
 .overflow-image {
-    background-position: unset !important;
+    /* background-position: unset !important; */
     width: 40%;
 }
 
