@@ -30,9 +30,31 @@
                                     <a class="btn btn-light" href="{{ asset('images/gallery/1.jpg') }}" data-lightbox="WeddingPhotos"
                                         title="Wedding Photos">View</a>
                                 </div>
-                                <img src="{{ asset('images/gallery/2.jpg') }}" alt="" />
+                                <img src="{{ asset('images/gallery/1.jpg') }}" alt="" />
                             </div>
                         </div>
+
+                        <div class="col-sm">
+                            <div class="item">
+                                <div class="hover-info">
+                                    <a class="btn btn-light" href="{{ asset('images/gallery/9.jpg') }}" data-lightbox="WeddingPhotos"
+                                        title="Wedding Photos">View</a>
+                                </div>
+                                <img src="{{ asset('images/gallery/9.jpg') }}" alt="" />
+                            </div>
+                        </div>
+
+                        <div class="col-sm">
+                            <div class="item">
+                                <div class="hover-info">
+                                    <a class="btn btn-light" href="{{ asset('images/gallery/10.jpg') }}" data-lightbox="WeddingPhotos"
+                                        title="Wedding Photos">View</a>
+                                </div>
+                                <img src="{{ asset('images/gallery/10.jpg') }}" alt="" />
+                            </div>
+                        </div>
+
+                        <div class="w-100"></div>
 
                         <div class="col-sm">
                             <div class="item">
@@ -40,7 +62,7 @@
                                     <a class="btn btn-light" href="{{ asset('images/gallery/2.jpg') }}" data-lightbox="WeddingPhotos"
                                         title="Wedding Photos">View</a>
                                 </div>
-                                <img src="{{ asset('images/gallery/1.jpg') }}" alt="" />
+                                <img src="{{ asset('images/gallery/2.jpg') }}" alt="" />
                             </div>
                         </div>
 
@@ -54,32 +76,10 @@
                             </div>
                         </div>
 
-                        <div class="w-100"></div>
-
                         <div class="col-sm">
                             <div class="item">
                                 <div class="hover-info">
-                                    <a class="btn btn-light" href="{{ asset('images/gallery/4.jpg') }}" data-lightbox="WeddingPhotos"
-                                        title="Wedding Photos">View</a>
-                                </div>
-                                <img src="{{ asset('images/gallery/4.jpg') }}" alt="" />
-                            </div>
-                        </div>
-
-                        <div class="col-sm">
-                            <div class="item">
-                                <div class="hover-info">
-                                    <a class="btn btn-light" href="{{ asset('images/gallery/5.jpg') }}" data-lightbox="WeddingPhotos"
-                                        title="Wedding Photos">View</a>
-                                </div>
-                                <img src="{{ asset('images/gallery/5.jpg') }}" alt="" />
-                            </div>
-                        </div>
-
-                        <div class="col-sm">
-                            <div class="item">
-                                <div class="hover-info">
-                                    <a class="btn btn-light" href="{{ asset('images/gallery/10.jpg') }}" data-lightbox="WeddingPhotos"
+                                    <a class="btn btn-light" href="{{ asset('images/gallery/12.jpg') }}" data-lightbox="WeddingPhotos"
                                         title="Wedding Photos">View</a>
                                 </div>
                                 <img src="{{ asset('images/gallery/12.jpg') }}" alt="" />
@@ -91,7 +91,7 @@
                         <div class="col-sm">
                             <div class="item">
                                 <div class="hover-info">
-                                    <a class="btn btn-light" href="{{ asset('images/gallery/7.jpg') }}" data-lightbox="WeddingPhotos"
+                                    <a class="btn btn-light" href="{{ asset('images/gallery/11.jpg') }}" data-lightbox="WeddingPhotos"
                                         title="Wedding Photos">View</a>
                                 </div>
                                 <img src="{{ asset('images/gallery/11.jpg') }}" alt="" />
@@ -101,20 +101,20 @@
                         <div class="col-sm">
                             <div class="item">
                                 <div class="hover-info">
-                                    <a class="btn btn-light" href="{{ asset('images/gallery/8.jpg') }}" data-lightbox="WeddingPhotos"
+                                    <a class="btn btn-light" href="{{ asset('images/gallery/7.jpg') }}" data-lightbox="WeddingPhotos"
                                         title="Wedding Photos">View</a>
                                 </div>
-                                <img src="{{ asset('images/gallery/8.jpg') }}" alt="" />
+                                <img src="{{ asset('images/gallery/7.jpg') }}" alt="" />
                             </div>
                         </div>
 
                         <div class="col-sm">
                             <div class="item">
                                 <div class="hover-info">
-                                    <a class="btn btn-light" href="{{ asset('images/gallery/9.jpg') }}" data-lightbox="WeddingPhotos"
+                                    <a class="btn btn-light" href="{{ asset('images/gallery/6.jpg') }}" data-lightbox="WeddingPhotos"
                                         title="Wedding Photos">View</a>
                                 </div>
-                                <img src="{{ asset('images/gallery/9.jpg') }}" alt="" />
+                                <img src="{{ asset('images/gallery/6.jpg') }}" alt="" />
                             </div>
                         </div>
                 </div>
