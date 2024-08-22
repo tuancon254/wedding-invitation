@@ -30,8 +30,8 @@
     <link href="{{ asset('css/jquery.minicolors.css') }}" rel="stylesheet" />
 
     <!-- Template CSS -->
-    <link href="{{ asset('css/style.css') }}" rel="stylesheet" />
-    <link href="{{ asset('css/index.css') }}" rel="stylesheet" />
+    <link href="{{ asset('css/style.css')."?ver=". now()->format('ymdhis')  }}" rel="stylesheet" />
+    <link href="{{ asset('css/index.css')."?ver=". now()->format('ymdhis') }}" rel="stylesheet" />
 
     <!-- Modernizr JS -->
     <script src="{{ asset('js/modernizr-3.6.0.min.js') }}"></script>
@@ -80,9 +80,9 @@
     <script src="{{ asset('js/jquery.zoomslider.js') }}"></script>
 
     <!-- Template Scripts -->
-    <script src="{{ asset('js/variables.js') }}" asp-append-version="true"></script>
-    <script src="{{ asset('js/scripts.js') }}" asp-append-version="true"></script>
-    <script src="{{ asset('js/template.settings.js') }}" asp-append-version="true"></script>
+    <script src="{{ asset('js/variables.js')."?ver=". now()->format('ymdhis')  }}" asp-append-version="true"></script>
+    <script src="{{ asset('js/scripts.js')."?ver=". now()->format('ymdhis')  }}" asp-append-version="true"></script>
+    <script src="{{ asset('js/template.settings.js')."?ver=". now()->format('ymdhis')  }}" asp-append-version="true"></script>
     <script src="{{ asset('js/jquery.minicolors.min.js') }}"></script>
     @yield('js')
 </body>
